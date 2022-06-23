@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+       h2 { width: 400px; height: 50px; border: 1px solid #000; text-indent: 20px; margin-bottom: 10px; line-height: 2; font-size: 25px;} 
+    </style>
+</head>
+<body>
+    <h2 id="text1" data-name="최우식" data-age="20" >xxx</h2>
+    <h2 id="text2" data-name-lee="이철수">xxx</h2>
+    <h2 id="text3" data-name-age="30">xxx</h2>
+    <h2 id="text4" data-base-val1="30" data-base-val2="100" >xxx</h2>
+
+    <script>
+        // data-kim: dataset.kim
+        // data-aaa-bbb : dataset.aaaBbb 카멜표기법으로 이렇게 가져올수있다
+        // data-aaa-bbb-ccc: dataset.aaaBbb.Ccc 뒤에있는 하이픈은 붙여서 대문자로
+
+        let text1= document.querySelector('#text1');
+        let text2= document.querySelector('#text2');
+        let text3= document.querySelector('#text3');
+        let text4= document.querySelector('#text4');
+
+        // 이 값을 꺼내와서 박스에 출력하겠다.
+        text1.innerHTML= `${text1.dataset.name}의 나이는 
+                          ${text1.dataset.age}살 입니다.` // 엔터치는게 가능하니까
+        text2.innerHTML= `${text2.dataset.nameLee}님 안녕하세요.`
+        text3.innerHTML= `${text3.dataset.nameAge}살 입니다.`
+
+        // 두개의 값을 가져와서 합을 구하기
+        // let num1= text4.dataset.baseVal1;
+        // let num2= text4.dataset.baseVal2;
+        // text4.innerHTML= num1+num2; //문자로 들어와서 연결만됨
+        
+        let num1= Number(text4.dataset.baseVal1);
+        let num2= parseInt(text4.dataset.baseVal2);
+        text4.innerHTML= num1+num2;
+        
+    </script>  
+</body>
+</html>

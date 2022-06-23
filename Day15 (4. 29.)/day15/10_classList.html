@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style> 
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            margin: 20px;
+            transition:0.4s;
+            text-align: center;
+            font-size: 50px;
+            line-height: 4;
+        }      
+        .box {
+            color: red;
+            background-color: blue;
+            border-radius: 50%;
+        }
+        .on1 { width:400px; border-radius: 100px; background-color:tomato;   }
+        .on2 { border-width: 10px; border-color:green; color:skyblue  }
+        strong {
+            display: block; padding: 10px; width: 200px; border: 1px solid #000;
+        }
+        .on3 {
+            background: hotpink;
+            color:#fff;   
+            text-align: center;         
+        }
+    </style>
+</head>
+<body>
+   <div>xxx</div>
+   <strong>테스트</strong>
+   
+   <p class="btn">
+    <button>add</button>
+    <button>remove</button>
+    <button>toggle</button>
+    <button>contains</button>
+    <button>replace</button>
+    <button>toggle조건</button>
+   </p>
+
+    <script>
+        const div= document.querySelector('div');
+        const btn= document.querySelectorAll('button');
+        const str= document.querySelector('strong');
+        let has= '';
+
+        btn[0].addEventListener('click', function(e){
+            div.classList.add('box');
+            // div.classList.add('box', 'on1','on2'); //여러개 추가 가능
+            has=div.classList.contains('box'); // contains: 이 클래스가 있냐 없냐를 판별
+            div.textContent=has;
+        })
+        btn[1].addEventListener('click', function(e){
+            // div.classList.remove('box', 'on1', 'on2');
+            div.classList.remove('box');
+            has=div.classList.contains('box');
+            div.textContent=has;
+
+        })
+        btn[2].addEventListener('click', function(e){
+            div.classList.toggle('box');
+            has=div.classList.contains('box');
+            div.textContent=has;
+        })
+        btn[3].addEventListener('click', function(e){
+            has=div.classList.contains('box');
+            if(has){
+                alert('클래스가 존재'+has);
+            }else{
+                alert('클래스가 없음'+has);
+            };
+        })
+        btn[4].addEventListener('click', function(e){
+            div.classList.replace('box', 'on1');
+        })
+
+        let cnt= 0;
+        btn[5].addEventListener('click', function(e){
+            cnt++;
+            str.classList.toggle('on3',cnt %3==0); //조건을 붙일수 있음. 잘쓰진않음
+            //잘쓰면 좋으나 잘쓰기 쉽지 않음, 이런식으로 만들어쓸수도있다~ 세번쨰에만작동
+        })
+     
+    </script>
+    
+</body>
+</html>

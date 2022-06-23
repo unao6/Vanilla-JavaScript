@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        div {
+            width: 500px; border: 1px solid #000;
+            height: 50px; margin-bottom: 20px; font-size: 20px; line-height: 50px;
+            text-indent: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">xxx</div>
+    <p class="btn">
+        <button>random()</button>
+        <button>random() * 10 </button> 
+        <button>random() * 10 + 5</button> 
+        <button>random()+Math.floor()</button> 
+        <button>random()+Math.ceil()</button> 
+    </p>
+
+    <script>
+        const box= document.querySelector('.box');
+        const btn= document.querySelectorAll('.btn button');
+        let ran=0;
+
+        btn[0].addEventListener('click', function(e){
+            ran= Math.random();
+            box.textContent=ran;
+        })
+        btn[1].addEventListener('click', function(e){
+            //범위
+            ran=Math.random()*10;
+            box.textContent=ran;
+        })
+        btn[2].addEventListener('click', function(e){
+            //시작값
+            ran=Math.random()*10+5;
+            box.textContent=ran;
+        })
+        btn[3].addEventListener('click', function(e){
+            //소숫점뒷자리 버리는역할
+            ran=Math.random()*10;
+            ran=Math.floor(ran);
+            box.textContent=ran;
+        })
+        btn[4].addEventListener('click', function(e){
+            //소숫점 이하 올림, 0안나옴
+            ran=Math.random()*5
+            ran=Math.ceil(ran);
+            box.textContent=ran;
+        })
+        
+    </script>
+</body>
+</html>

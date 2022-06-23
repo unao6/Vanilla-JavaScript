@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .box { width: 300px; height: 200px; border: 1px solid #000; margin: 10px; font-size: 50px; text-align: center; line-height: 4; transition:0.4s}
+    </style>
+</head>
+<body>
+    <div class="box">xx</div>
+
+    <p class="btn">
+        <button>red</button>
+        <button>green</button>
+        <button>pink</button>
+        <button>skyblue</button>
+    </p>
+
+    <script>
+    const box= document.querySelector('.box');
+    const btn= document.querySelectorAll('.btn button');
+
+    for (i=0; i<btn.length; i++){
+        btn[i].addEventListener('click', function(e){
+            box.textContent= e.currentTarget.textContent;
+            box.style.backgroundColor= e.currentTarget.textContent;
+        })
+    }
+
+    // forEach() 메서드는 주어진 함수를 배열 요소 각각에 대해 실행합니다.
+    btn.forEach(item=>{ //item=현재값
+        item.addEventListener('click', function(e){
+            box.textContent= e.currentTarget.textContent;
+            box.style.backgroundColor= e.currentTarget.textContent;
+        })
+    })
+
+    //작업하는 사람에 따라서 편한게 다름
+    </script>
+
+</body>
+</html>

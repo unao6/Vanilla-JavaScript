@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .box { margin: 30px; }
+        .box button { padding: 20px 40px;}
+        .box .list { margin-top: 20px; }
+        .box .list li { width: 200px; line-height: 45px; border: 1px solid #000; text-align: center; margin-bottom: 5px;}
+
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <button>추가</button>
+        <ul class="list">           
+            <!-- <li>추가</li>
+                  li 생성   
+            -->
+        </ul>
+    </div>
+
+    <script>
+         const btn= document.querySelector('button');
+         const ul= document.querySelector('ul');
+
+         btn.addEventListener('click', (e)=>{
+            let bgColor = '#'+Math.floor(Math.random()*0xffffff).toSting(16); //색깔 랜덤으로 뽑아오기
+            
+            ul.append(el);
+            for(let i= 0; i<5; i++){
+                el.innerText=`Main Menu-${i}`;
+                el.style.background= bgColor;
+                ul.append(el);
+            }
+         })
+    </script> 
+ 
+작동 안됨 쌤꺼보기
+</body>
+</html>

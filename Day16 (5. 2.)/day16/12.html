@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+         li {
+            width: 200px; height: 40px; border: 1px solid #000; margin-bottom: 5px;
+            line-height: 40px; text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li> list 목록 </li>
+    </ul>
+
+    <script>
+       const ul= document.querySelector('ul');
+       const li= ul.querySelector('li');
+       // const li= document.querySelector('ul li'); 이렇게 한거랑 똑같음. 꼭 경로 최상위부터 안써도 됨
+
+       for (let i=0; i<10; i++){
+           //복사
+           const clone= li.cloneNode(true);
+           ul.append(clone);
+       }
+             
+    </script>
+
+    <pre>
+        대상노드.cloneNode()
+        기본값은 false
+                true(자식노드도 복사)
+
+        앞으로 카피해서 뭚 ㅏㄴ들어서 쓴다고하면 자식노드를 만들고 카피해서 쓰실 수 있어요
+    </pre>
+</body>
+</html>

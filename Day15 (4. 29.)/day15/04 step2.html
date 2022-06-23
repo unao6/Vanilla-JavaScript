@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+            .box {
+                width: 600px; height: 600px; border: 1px solid #000;
+                position: relative; margin:10px auto; background: beige;  
+                            
+            }
+            .box img {
+                width: 100px;position: absolute;
+                left: 10px ;top: 10px ;
+                transition: 0.3s;  
+            }
+            button {
+                padding: 15px 20px;
+            }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="images/img.jpg" alt="" class="pic" width="200" >
+    </div>
+
+    <p class="btn">
+        <button>왼</button>
+        <button>오</button>
+        <button>위</button>
+        <button>아래</button>
+        <button>랜덤</button>
+    </p>
+
+    <script>
+        const img= document.querySelector('.box img');
+        const box= document.querySelector('.box');
+        const btn= document.querySelectorAll('.btn button');
+        
+        //css의 좌표값을 뽑아올것임, 좌표값은 문자
+        let x, y ;
+        x= parseInt(getComputedStyle(img).left);
+        y= parseInt(getComputedStyle(img).top);
+        
+        for( let i=0; i<btn.length; i++){
+            btn[i].addEventListener('click', function(e){
+                if(i==0){
+                    x -= 10;
+                    img.style.left= x+'px';
+                }else if(i==1){
+                    x += 10;
+                    img.style.left= x+'px';
+                }else if(i==2){
+                    y -= 10;
+                    img.style.top= y+'px';
+                }else if(i==3){
+                    y += 10;
+                    img.style.top= y+'px';
+                }else if(i==4){
+                    x=Math.random() * parseInt(getComputedStyle(box).width);
+                    y=Math.random() * parseInt(getComputedStyle(box).height);
+                    img.style.left=x+'px';
+                    img.style.top=y+'px';
+                    //이 네모안에서만 돌도록 값을 잘 설정해줄수도있음
+                    
+
+                }            
+            })
+        }
+
+    </script>
+    <pre>키보드로 입력으로도 할수있음</pre>
+</body>
+</html>

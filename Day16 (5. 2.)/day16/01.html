@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <a href="http://www.naver.com" title="네이버로 이동합니다.">네이버</a>
+
+    <script>
+        const link=document.querySelector('a');
+        link.addEventListener('click',(e)=>{
+            e.preventDefault();
+            //
+
+            const aa= link.getAttribute('title');
+            return false;
+
+            alert(aa);
+        })
+    </script>
+
+    <!-- <script>
+        const link=document.querySelector('a');
+        link.addEventListener('click',(e)=>{
+            e.preventDefault();
+            //링크 막아주기, submit부분 막아주는 역할
+
+            const aa= link.getAttribute('title');
+            alert(aa);
+        })
+    </script> -->
+</body>
+</html>

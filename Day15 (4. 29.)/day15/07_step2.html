@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .box { width: 300px; height: 200px; border: 1px solid #000; margin: 10px; font-size: 50px; text-align: center; line-height: 4; transition:0.4s}
+    </style>
+</head>
+<body>
+    <div class="box">xx</div>
+    <p class="btn">
+        <button>red</button>
+        <button>green</button>
+        <button>pink</button>
+        <button>skyblue</button>
+    </p>
+
+    <script>
+        const box= document.querySelector('.box');
+        const btn= document.querySelectorAll('.btn button');
+
+        //버튼에 텍스트가 있으니까 이렇게 표현가능 세가지 다 쓸수있음.
+        // e.target은 부모로부터 이벤트가 위임된 자식을 반환한다
+        // e.currentTarget은 클릭한 그 요소를 반환
+
+        btn[0].addEventListener('click', function(e){
+            box.textContent=e.currentTarget.textContent;
+            box.style.backgroundColor=e.currentTarget.textContent;
+        })
+
+        btn[1].addEventListener('click', function(e){
+            box.textContent=e.target.textContent
+            box.style.backgroundColor=e.target.textContent
+        })
+
+        btn[2].addEventListener('click', function(e){
+            box.textContent=this.textContent;
+            box.style.backgroundColor=this.textContent;
+        })
+
+        btn[3].addEventListener('click', function(e){
+            box.textContent=this.textContent;
+            box.style.backgroundColor=e.currentTarget.textContent;
+        })
+
+        
+    </script>
+</body>
+</html>

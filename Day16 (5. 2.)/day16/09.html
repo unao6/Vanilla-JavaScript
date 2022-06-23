@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div {
+            width: 400px; height: 100px; border: 1px solid #000;
+            padding: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+       
+    </div>
+
+    <script>
+      //h2를 생성해서 div맨뒤에 붙이기
+      let dom= document.querySelector('div'); //div찾아오기
+      let h2= document.createElement('h2'); // document.createElement('태그'); <-태그생성
+      let txt= document.createTextNode('안녕하세요') //텍스트노드도 생성할수있음 (안중요)
+      h2.append(txt); // 아직 화면에 안보임
+      dom.append(h2); //화면이 dom임
+
+      let dom1= document.querySelector('div');
+      let h3= document.createElement('h3');
+      dom.append(h3);
+      h2.innerHTML='지금은 연습중';
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>  
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .box {
+            width: 200px; margin: 30px;
+        }
+        .box ul {}
+        .box ul li { line-height: 40px; border: 1px solid #000; margin-bottom: 5px; text-indent: 10px;}
+        p { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+  <div class="box">      
+      <ul class="list">
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+          <li>hi</li>
+      </ul>
+      <!-- 주석처리 -->
+      <p class="txt1">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+      </p>
+      <p class="txt1">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+      </p>
+
+  </div>
+ <script>
+      let list= document.querySelector('.list');
+      let li= document.querySelectorAll('.list li');
+      let p= document.querySelectorAll('p');
+
+      let a1= list.firstElementChild;
+      let a2= list.lastElementChild;
+      let a3= list.parentElement;
+      let a4= list.children;
+      let a5= list.children[0];
+      let a6= li[3].nextElementSibling;
+      let a7= li[2].previousElementSibling;
+
+
+      li[0].innerHTML='0/'+a1;
+      li[1].innerHTML='1/'+a2;
+      li[2].innerHTML='2/'+a3;
+      li[3].innerHTML='3/'+a4;
+      li[4].innerHTML='4/'+a5;
+      li[5].innerHTML='5/'+a6;
+      li[6].innerHTML='6/' +a7;
+      li[7].innerHTML='7/'
+      li[8].innerHTML='8/'
+      li[9].innerHTML='9/'
+      li[9].innerHTML='9/'
+
+      console.log(a1);
+      console.log(a2);
+      console.log(a3);
+      console.log(a4);
+      console.log(a5);
+      console.log(a6);
+      console.log(a7);
+      a5.style.backgroundColor='gray';
+      a6.style.backgroundColor='yellow';
+      a7.style.backgroundColor='pink';
+     
+      
+ </script>   
+
+ <pre>
+    요소만 따지느것@
+
+    children
+    parentElement
+    firstElementChild
+    lastElementChild
+    nextElmenetSibling
+    previousElementSibling
+ </pre>
+</body>
+</html>

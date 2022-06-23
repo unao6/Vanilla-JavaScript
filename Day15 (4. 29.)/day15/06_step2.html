@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+      .box {
+        width: 400px; height: 40px;
+        border: 1px solid #000; margin-bottom: 10px;
+        font-size: 20px; line-height: 2;
+        text-align: center;
+      }
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+  <div class="box"></div>
+  <p>
+    <button data-url="http://www.naver.com">네이버</button>
+    <button data-url="http://www.nate.com">네이트</button>
+    <button data-url="http://www.daum.com">다음</button>
+  </p>
+
+  <script>
+    const arrURL=[];
+    arrURL[0]="http://www.naver.com";
+    arrURL[1]="http://www.nate.com";
+    arrURL[2]="http://www.daum.com";
+    const btn= document.querySelectorAll('button');
+    const box= document.querySelector('.box');    
+    let cnt=0;
+
+    for(i=0; i<arrURL.length; i++);{
+      btn[i].addEventListener('click', function(e){
+        box.textContent=arrURL[i];
+        cnt=i;
+      })
+    }
+
+    box.addEventListener('click', function(e){
+      window.open(arrURL[cnt]);
+    })
+  </script>
+
+</body>
+</html>

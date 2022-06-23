@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>  
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .box {
+            width: 200px; margin: 30px;
+        }
+        .box ul { }
+        .box ul li { line-height: 40px; border: 1px solid #000; margin-bottom: 5px; text-indent: 10px;}
+        p { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+  <div class="box">      
+      <ul class="list">
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+          <li>hi</li>
+      </ul>
+      <!-- 주석처리 -->
+      <p class="txt1">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+      </p>
+      <p class="txt1">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+      </p>
+
+  </div>
+ <script>
+      let list= document.querySelector('.list');
+      let li= document.querySelectorAll('.list li');
+      let p= document.querySelectorAll('p');
+
+      let a1= list.firstChild;
+      let a2= list.lastChild;
+      let a3= list.parentNode;
+      let a4= list.childNodes;
+      let a5= li[1].nextSibling;
+      let a6= li[1].nextSibling.nextSibling.nextSibling.nextSibling; 
+      let a7= li[3].previousSibling.previousSibling;
+      let a8= p[0].nodeType;
+      let a9= p[0].nodeValue;
+
+      li[0].innerHTML='0/'+ a1; // list의 첫번째 child가 왜 텍스트가나오냐? 엔터를 인식해서그럼 (공백인식)
+      li[1].innerHTML='1/' +a2; //lastchild도 마지막의 빈공간을 인식 (텍스트로인식)
+      li[2].innerHTML='2/' +a3;
+      li[3].innerHTML='3/' +a4;
+      li[4].innerHTML='4/' +a5;
+      li[5].innerHTML='5/' +a6; //결론: 엔터친부분을 텍스트로 인식! 한가지의 개체로 인식!
+      li[6].innerHTML='6/' +a7;
+      li[7].innerHTML='7/' +a8;
+      li[8].innerHTML='8/' +a9;
+      li[9].innerHTML='9/'
+      li[9].innerHTML='9/'
+
+      console.log(a1);
+      console.log(a2);
+      console.log(a3);
+      console.log(a4);
+      console.log(a5);
+      console.log(a6);
+      console.log(a7);
+      console.log(a8);
+      console.log(a9);
+      a6.style.backgroundColor='yellow'; 
+   
+     
+      
+ </script>   
+
+ <pre>
+    청므에는 이걸썼는데 너무 타고다니기 불편해서 2_2가 나옴!! 
+    하위버전에서는 elemet가 안되는데 지금은 별로 상관없음
+ </pre>
+</body>
+</html>

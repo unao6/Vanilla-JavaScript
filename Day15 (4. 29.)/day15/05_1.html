@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+           .box {
+               width: 100px; height: 100px;
+               border: 1px solid #000; display: inline-block;
+           }
+           button { padding: 10px 25px;  }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    
+    <p> <button>확인</button></p>
+
+    <script>
+      const box= document.querySelectorAll('.box');
+      const btn= document.querySelector('button');
+      const arrColor=['pink', 'yellow', 'tomato', 'skyblue', 'lime'];
+      let ran=0, bgColor='';
+
+      btn.addEventListener('click', function(e){ //이벤트는 쓰든안쓰든 걸어놓기
+        ran=Math.random()*arrColor.length;
+        ran=Math.floor(ran);
+        console.log(ran);
+        bgColor=arrColor[ran];
+        //컬러의 갯수만큼 랜덤을걸고, 백컬러를 랜덤갯수번째의 색으로
+
+        // box.style.backgroundColor=bgColor; 안됨.박스가여러개라서
+        for(let i=0; i<box.length; i++){
+            // box[i].style.backgroundColor=bgColor; //이렇게 반복문으로 돌려야함
+            document.body.style.backgroundColor=bgColor; //이렇게 배경에해당하는색상도바꿀수있음
+        }
+      })
+       
+    </script>
+   
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        div {
+            width: 400px; height: 300px; border: 1px solid #000;
+        }
+        h2 {background: pink;}
+        h3 {background: green;}
+        p {background: skyblue;}
+        .box {
+            width: 200px; height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- 
+        <h2>test</h2>
+        <h3>test</h3>
+        <p>list</p>
+        <img src="images/cat0.jpg" width="150" alt=""> -->
+    </div>
+
+    <script>
+        const dom= document.querySelector('div');
+        const h2= document.createElement('h2');
+
+        dom.append(h2);
+        // h2.innerHTML='제목2 입니다.'
+        // h2.innerText='제목2 입니다.'
+        // h2.textContent='제목2 입니다.'
+        const txt=document.createTextNode('환영합니다.');
+        h2.appendChild(txt);        // 네가지 다 가능한데 마지막은 제일 복잡해서 잘 안쓰고 수업이니까!~
+
+        const h3= document.createElement('h3');
+        const p= document.createElement('p');
+
+        h3.innerHTML='제목3입니다';
+        p.innerHTML='문단 연습입니다.';
+
+        const img= document.createElement('img')
+        img.setAttribute('src', 'images/cat0.jpg');
+        img.setAttribute('alt', 'images/cat0.jpg');
+        img.setAttribute('title', '설명');
+        img.setAttribute('width', '300px');
+        img.setAttribute('id', 'test');
+        img.setAttribute('class', 'box');  // 이렇게 동적으로 다 갖다 붙일 수 있음
+        
+
+        dom.append(h3, p, img);
+    </script>
+</body>
+</html>

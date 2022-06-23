@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style> 
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            margin: 20px;
+            transition:0.4s
+        }      
+        .box {
+            color: red;
+            background-color: blue;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+   <div></div>
+   <p class="btn">
+    <button>add</button>
+    <button>remove</button>
+    <button>toggle</button>
+   </p>
+
+    <script>
+        const div=document.querySelector('div');
+        const btn=document.querySelectorAll('.btn button');
+
+        btn[0].addEventListener('click', function(e){
+            div.classList.add('box');
+        })
+        btn[1].addEventListener('click', function(e){
+            div.classList.remove('box');
+        })
+        btn[2].addEventListener('click', function(e){
+            div.classList.toggle('box');
+        })      
+        
+        
+    </script>    
+<pre>클래스를 동적으로 붙였다 뗐다 하는게 가능함</pre>
+</body>
+</html>
