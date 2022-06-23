@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+  <img src="images/move/image1.png" alt="" id="pic">
+  
+  <script>
+      //0.3초 마다 이미지를 변경 18번까지 끝나면 다시 1부터
+      // total = 18, cnt=1, imgrurl='', timer, interval
+      let total = 18, cnt=1, imgrurl='', timer=null, interval=300, img='';
+
+      img=document.querySelector('#pic');
+      timer= setInterval( ()=>{
+        cnt++;
+        if(cnt>total){
+          cnt=1;
+        }
+        imgurl='images/move/image'+cnt+'.png';
+        img.setAttribute('src', imgurl)
+        //console.log(imgurl);
+      }, interval)
+      
+      
+      
+     
+  </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+      div{
+        width: 100px; height: 100px; background: hotpink; transition: 0.5s;
+      }
+      p{margin-top: 15px;}
+    </style>
+
+</head>
+<body>
+  <div class="box"></div>
+  <p>
+    <button class="btn1">증가</button>
+    <button class="btn2">증가</button>
+    <button class="btn3">증가</button>
+  </p>
+  <script>
+      let btn1=document.querySelector('.btn1')
+      let btn2=document.querySelector('.btn2')
+      let btn3=document.querySelector('.btn3')
+
+      let box=document.querySelector('box')
+      let w=100, getw=0, dom='';
+      /*
+      let w= box.style.width;
+      box.textContent=w; //스타일에 있는 값은 못가져옴
+      */
+
+      btn1.addEventListener('click', function(e){
+        w += 50;
+        box.style.width = w+'px';
+      })
+
+      btn2.addEventListener('click', function(e){
+        dom= window.getComputedStyle(box); //스타일을 꺼내오려면 이 명령어써야함.
+        getw= dom.getPropertyValue('width');
+        getw=parseInt(getw);
+        box.itextContent=getw
+
+        getw+=50;
+        box.style.width=getw+'px';
+      })
+
+      btn3.addEventListener('click', function(e){
+        getw=parseInt(getComputedStyle(box).width);
+        getw+=20;
+        box.textContent=getw;
+        box.style.width=getw+'px';
+      })
+  </script>
+
+  안됨!!!!
+</body>
+</html>

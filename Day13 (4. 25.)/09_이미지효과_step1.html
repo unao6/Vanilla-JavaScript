@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+      img { width:500px;}
+
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+  <img src="images/img0.jpg" alt="" id="pic">
+  <p class="btn">
+    <button>점점 투명하게</button>
+    <button>점점 불투명하게</button>
+  </p>
+  
+  <script>
+      const pic= document.querySelector('#pic');
+      const btn1= document.querySelector('.btn button:first-child');
+      const btn2= document.querySelector('.btn button:last-child');
+      let op=1;
+
+      btn1.addEventListener('click', function(){
+        op -= 0.1;
+        pic.style.opacity=op;
+        console.log(op);
+      })
+
+      btn2.addEventListener('click', function(){
+        op += 0.1;
+        pic.style.opacity=op;
+        console.log(op);
+      })
+  </script>
+</body>
+</html>

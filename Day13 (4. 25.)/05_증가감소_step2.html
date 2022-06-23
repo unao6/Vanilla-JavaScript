@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+      #box{
+        width: 300px; height: 80px; border: 1px solid #000;
+        font-size: 40px; line-height: 1.8; text-align: center;
+        margin-bottom: 30px;
+      }
+      button{ width: 120px; height: 50px;}
+
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+  <div id="box">xxx</div>
+  <p>
+    <button class="next">증가</button>
+    <button class="prev">감소</button>
+  </p>
+
+  <script>
+      const box= document.querySelector('#box');
+      const next= document.querySelector('.next');
+      const prev= document.querySelector('.prev');
+      let count=0;
+
+      box.textContent=count;
+
+      next.addEventListener('click', function(){
+        //10까지만 증가        
+        if(count<10){
+        count++; //count+= 1; //count= count+1; 다 같은말
+        box.textContent=count;
+        }else{
+          count==0;
+        }
+      })
+
+      prev.addEventListener('click', function(){
+        //0까지만 감소
+        if(count>0){
+          count--;
+          box.textContent= count;
+        }
+      })
+  </script>
+</body>
+</html>

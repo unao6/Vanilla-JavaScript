@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+      #box{
+        width: 300px; height: 80px; border: 1px solid #000;
+        font-size: 40px; line-height: 1.8; text-align: center;
+        margin-bottom: 30px;
+      }
+      button{ width: 120px; height: 50px;}
+
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+  <div id="box">xxx</div>
+  
+  <script>
+      const box= document.querySelector('#box');
+      let count=0, timer=null, interval=1000;
+      box.textContent=count;
+
+      timer= setInterval( ()=>{        
+        count++;
+        if(count>5){
+          clearInterval(timer);
+        }
+        
+        box.textContent.count;
+      }, interval)      
+  </script>
+
+  <pre>
+    1.
+    const box= document.querySelector('#box');
+      let count=0, timer=null, interval=1000;
+      box.textContent=count;
+
+      timer= setInterval( ()=>{
+        
+        count++;
+        //10이 넘으면 다시 0부터 롤링
+        if(count>10){
+          count=0;
+        }        
+        box.textContent.count;
+      }, interval)   
+
+      2.
+      
+        const box= document.querySelector('#box');
+        let count=0, timer=null, interval=1000;
+        box.textContent=count;
+  
+        timer= setInterval( ()=>{        
+          count++;
+          count=count%5;
+          //0 1 2 3 4    
+          box.textContent.count;
+        }, interval)    
+        
+      3. 
+      const box= document.querySelector('#box');
+      let count=0, timer=null, interval=1000;
+      box.textContent=count;
+
+      timer= setInterval( ()=>{        
+        count++;
+        if(count>5){
+          clearInterval(timer);
+        }
+        
+        box.textContent.count;
+      }, interval)  
+    
+  </pre>
+</body>
+</html>

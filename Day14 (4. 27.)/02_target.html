@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+      div{
+        padding: 10px; border: 1px solid #000;
+        font-size: 20px; margin-bottom: 20px; cursor: pointer;
+      }
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+  <div class="box">
+    <button>클릭1</button>
+    <strong>클릭2</strong>
+  </div>
+
+  <div class="output">
+    ??
+  </div>
+  <script>  
+    const dom=document.querySelector('.box');
+    const output=document.querySelector('.output');
+
+    //event: 사건, evt, e
+    //currentTarget: 이벤트가 걸려있는 대상
+    //target: 실제로 가리킨 대상
+    dom.addEventListener('click', function(){
+      // output.textContent= event.currentTarget.innerHTML
+      output.textContent=event.target.innerHTML
+
+    })
+      
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+      div{
+        width: 100px; height: 100px; background: hotpink; 
+        cursor: pointer;
+        position: relative;
+      }
+     
+    </style>
+
+</head>
+<body>
+  <div class="box"></div>
+  
+  <script>
+    let box=document.querySelector('.box')
+
+    box.addEventListener('click', function(e){
+      let el=this, start=parseInt(getComputedStyle(el).left), end=start+100;
+
+      function go() {
+        let cur= parseInt(getComputedStyle(box).left);
+
+        setTimeout(function(){ //근데이렇게 애니메이션 하기에는 너무 어렵다~ 를 보여드리려고. 짤수는 있다
+          if(cur<end){
+            box.style.left=cur+1+'px';
+            go();
+          }
+        }, 5)
+      }
+      go();
+    }) 
+  </script>
+</body>
+</html>

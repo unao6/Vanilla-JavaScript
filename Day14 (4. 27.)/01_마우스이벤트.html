@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<div lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+      .box{
+        width: 120px; height: 100px; background: tomato; margin: 15px;
+        font-size: 16px; display: flex; justify-content: center; align-items: center;
+      }
+      .box p{
+        width: 50px; height: 50px; background: yellow;
+      }
+      .output{
+        border: 1px solid #000;
+        width: 200px; padding: 20px; margin-top: 20px;
+      }
+      button {
+        padding: 10px;
+      }
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+<div>
+  <!-- div.box.box$*6 -->
+  <div class="box box1">click</div>
+  <div class="box box2">dblclick/contextmenu</div>
+  <div class="box box3">mousedown/mouseup</div>
+  <div class="box box4">mousemove</div>
+  <div class="box box5"></div>
+    <p>text</p>
+</div>
+
+<div class="box box6"></div>
+    <p>test</p>
+</div>
+
+<p>
+  <button class="btn">삭제</button>
+</p>
+  
+<div class="output">
+  ???
+</div>
+  <script>
+      let dom1= document.querySelector('.box1');
+      let dom2= document.querySelector('.box2');
+      let dom3= document.querySelector('.box3');
+      let dom4= document.querySelector('.box4');
+      let dom5= document.querySelector('.box5');
+      let dom6= document.querySelector('.box6');
+      let output= document.querySelector('.output');
+      let btn= document.querySelector('.btn');
+
+      btn.addEventListener('click', () => {
+        output.innerHTML='';
+      })
+
+      dom1.addEventListener('click', () => {
+        output.innerHTML += '<div>click</div>';
+      })
+
+      dom2.addEventListener('dblclick', ()=>{
+        output.innerHTML += '<div>dblclick</div>';
+      })
+
+      dom2.addEventListener('contextmenu', ()=>{
+        output.innerHTML += '<div>contextmenu</div>';
+      })
+
+      dom3.addEventListener('mousedown', ()=>{
+        output.innerHTML += '<div>mousedown</div>';
+      })
+      dom3.addEventListener('mouseup', ()=>{
+        output.innerHTML += '<div>mouseup</div>';
+      })
+
+      dom4.addEventListener('mousemove', ()=>{
+        output.innerHTML += '<div>mousemove</div>';
+      })
+
+      dom5.addEventListener('mouseover', ()=>{ //마우스오버와 아웃은 자식요소까지 다 인식해버려서 쓰는게 위험함
+        output.innerHTML += '<div>mouseover</div>';
+      })
+
+      dom5.addEventListener('mouseout', ()=>{
+        output.innerHTML += '<div>mouseout</div>';
+      })
+
+      dom6.addEventListener('mouseenter', ()=>{ //설명 못들음 , 우ㅣ라서 리브랑 엔터를 쓴다고 함
+        output.innerHTML += '<div>mouseenter</div>';
+      })
+
+      dom6.addEventListener('mouseleave', ()=>{
+        output.innerHTML += '<div>mouseleave</div>';
+      })
+  </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+  <a href="#" class="link"></a>
+  <br>
+  <input type="text">
+  <lable for="chk">선택</lable>
+  <script>
+      let link= document.querySelector('.link');
+      link.textContent='네이버';
+      let attr= ['id', 'title', 'href', 'target']
+      let val= ['my', '네이버로 이동합니다', 'http://www.naver.com', '_blank']
+
+      Object.assign(link, {id:'my', title:'네이버로 이동', href:'http://www.naver.com', target:'_blank'});
+
+      let input= document.querySelector('input');
+      Object.assign(input, {id:'chk', name:'chk', type:'checkbox', checked:'ture'});
+
+      
+
+  </script>
+  <pre>
+    - 기본 -
+
+    let link= document.querySelector('.link');
+    link.textContent='네이버';
+
+    link.setAttribute('id', 'my');
+    link.setAttribute('title', '네이버로 이동합니다');
+    link.setAttribute('href', 'http://www.naver.com');
+    link.setAttribute('target', '_blank');
+
+
+    - 응용 - (set attribute 자체에 줄여서 쓸 수 있는 방법은 없음)
+
+    let link= document.querySelector('.link');
+    link.textContent='네이버';
+    let attr= ['id', 'title', 'href', 'target']
+    let val= ['my', '네이버로 이동합니다', 'http://www.naver.com', '_blank']
+
+    for( let i= 0; i< attr.length; i++){
+      link.setAttribute(attr[i], val[i]);
+    }
+
+    - 뒤에서 응용 -
+    Object.assign(link, {id:'my', title:'네이버로 이동', href:'http://www.naver.com', target:'_blank'});
+
+
+    결론: setAttribute를 쓴다고 하면 처음처럼 쓸 수도있지만 실제로 는 제일 아래처럼 사용하고 그게 편하다
+          물론 셋이 기본은 맞지만 불편해서,, 어사인사용
+  </pre>
+</body>
+</html>

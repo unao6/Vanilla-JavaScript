@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+      #box{
+        width: 300px; height: 80px; border: 1px solid #000;
+        font-size: 40px; line-height: 1.8; text-align: center;
+        margin-bottom: 30px;
+      }
+      button{ width: 120px; height: 50px;}
+
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+  <div id="box">xxx</div>
+  <p>
+    <button class="next">중지</button>
+    <button class="prev">시작</button>
+  </p>
+
+  <script>
+      const box= document.querySelector('#box');
+      const next= document.querySelector('.next');
+      const prev= document.querySelector('.prev');
+      let count=0, timer=null, interval=1000;
+      let isplay=true;
+      //현재 상태 진행중, 열림 true / 닫음 중지 false
+
+      box.textContent=count;
+
+      timer= setInterval(make, interavl);
+      function make(){
+        count++;
+        box.textContent=count;
+
+      }
+
+      next.addEventListener('click', function(){
+        if(isplay){
+          clearInterval(timer)
+          isplay=false;
+        }       
+      })
+
+      prev.addEventListener('click', function(){
+        if(!isplay){
+          timer= setInterval(make, interval);
+          isplay=true;
+        }
+
+       
+      })
+  </script>
+</body>
+</html>

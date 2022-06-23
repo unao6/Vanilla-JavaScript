@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+      .list{margin:10px;}
+      .list li{
+        width: 200px; height: 30px; border: 1px solid #000; margin-bottom: 5px;
+        font-size: 20px; line-height: 30px; text-align: center; cursor: pointer;
+      }
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+  <ul clas="list">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  
+  <script>
+      const li= document.querySelectorAll('.list li');
+
+      // for(let i=0; i<li.length; i++){
+      //   li[i].addEventListener('click', function(){
+      //     li[i].textContent='MainMenu'+i;
+      //   })
+      // }
+
+      for(let i=0; i<li.length; i++){
+        li[i].addEventListener('click', function(){
+          this.textContent='MainMenu'+i;
+        })
+      }
+
+      
+      
+  </script>
+
+  쌤이 쓴거 보기. 짜증나네진짜
+</body>
+</html>

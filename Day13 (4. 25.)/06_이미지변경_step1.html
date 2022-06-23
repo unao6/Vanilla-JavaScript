@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+    
+      .gallery h1 {font-size: 40px;}
+      .gallery img {width: 500px;}
+      .gallery button {padding: 5px 15px;}
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+  <!-- div.gallery>h1{xxx}+img+p>button -->
+  <div class="gallery">
+    <h1>xxx</h1>
+    <img src="images/cat0.jpg" alt="">
+    <p>
+      <button>이미지1</button>
+      <button>이미지2</button>
+      <button>이미지3</button>
+      <button>이미지4</button>
+    </p>
+  </div>
+  
+  
+  <script>
+    
+      const h1= document.querySelector('h1');
+      const img= document.querySelector('img');
+      const btn= document.querySelectorAll('button');
+
+      btn[0].addEventListener('click', function(){
+        h1.innerHTML='고양이0';
+        img.setAttribute('src','images/cat1.jpg');
+      })
+
+      btn[1].addEventListener('click', function(){
+        h1.innerHTML='고양이1';
+        img.setAttribute('src', 'images/cat2.jpg');
+      })
+
+      btn[2].addEventListener('click', function(){
+        h1.innerHTML='고양이2';
+        img.setAttribute('src', 'images/cat3.jpg');
+      })
+
+      btn[3].addEventListener('click', function(){
+        h1.innerHTML='새';
+        img.setAttribute('src', 'images/img1.jpg');
+      })
+
+  </script>
+</body>
+</html>

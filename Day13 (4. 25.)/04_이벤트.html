@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+
+    </style>
+</head>
+<body>
+  <button onclick="onBtn()">클릭</button>
+  <button id="btn1">클릭</button>
+  <button id="btn2">클릭</button>
+  <button id="btn3">클릭</button>
+  <button id="btn4">클릭</button>
+
+  <script>
+      const onBtn=()=>{
+        alert('test');
+      }
+
+      const btn1=document.querySelector('#btn1');
+      btn1.onclick=function(){
+        alert('test1');
+      }
+
+      const btn2= document.querySelector('#btn2');
+      btn2.addEventListener('click', function(){
+        alert('test3');
+      })
+
+      const btn3= document.querySelector('#btn3');
+      btn3.addEventListener('click', ()=>{
+        alert('test4');
+      })
+
+      const test= () => {
+        alert('test5');
+      }
+      const btn4= document.querySelector('#btn4');
+      btn4.addEventListener('click', test );
+
+      //이벤트 리스너는 DOM 객체에서 이벤트가 발생할 경우 해당 이벤트 처리 핸들러를 추가할 수 있는 오브젝트이다.
+  </script>
+</body>
+</html>

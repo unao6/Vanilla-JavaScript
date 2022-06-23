@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+      .list{margin:  10px;}
+      .list li{
+        width: 200px; height: 30px; border: 1px solid #000; margin-bottom: 5px;
+        font-size: 20px; line-height: 30px; text-align: center; cursor: pointer;
+      }
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+  <ul clas="list">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  
+  <script>
+      const li= document.querySelectorAll('.list li');
+
+      li[0].addEventListener('click', function(){
+        li[0].textContent='MainMenu'+0;
+      })
+
+      li[1].addEventListener('click', function(){
+        this.textContent='MainMenu'+1;
+        console.log(this);
+      })
+      li[2].addEventListner('click', ()=>{
+        this.textContent='MainMenu'+2;
+        console.log(this);
+      })
+      li[3].addEventListener('click', (event)=> {
+        this.textContent='MainMenu'+3;
+        console.log(this);
+      })
+      li[4].addEventListener('click', (e)=>{
+        this.textContent='MainMenu'+4;
+        console.log(this);
+      })
+      
+  </script>
+</body>
+</html>

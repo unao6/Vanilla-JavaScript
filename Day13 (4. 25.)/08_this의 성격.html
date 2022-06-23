@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+      div {
+        width: 300px; border: 1px solid #000;
+        height: 80px; font-size: 40px;line-height: 2;text-align: center;
+        cursor: pointer;
+      }
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+  <div>xxx</div>  
+  <script>
+      const dom= document.querySelector('div');
+      dom.addEventListener('click', ()=>{
+        // 이벤트한(누른) 자기자신을 this로 사용가능
+        // this.textContent='나는 박스';
+        // this.style.color='hotpink';
+        // this.style.backgroundColor='gold';
+        console.log(this);
+        //화살표 함수 안에서 this는 상위스코프의 this-window를 가르킨다
+        //function함수안에서는 자기자신인데,,
+      })
+  </script>
+
+  <pre>
+    1.
+    const dom= document.querySelector('div');
+    dom.addEventListener('click', function(){
+      dom.textContent='나는 박스';
+      dom.style.color='hotpink';
+      dom.style.backgroundColor='gold';
+    })
+
+    2.
+    const dom= document.querySelector('div');
+    dom.addEventListener('click', function(){
+      // 이벤트한 자기자신을 this로 사용가능
+      this.textContent='나는 박스';
+      this.style.color='hotpink';
+      this.style.backgroundColor='gold';
+      console.log(this);
+    })
+  </pre>
+</body>
+</html>

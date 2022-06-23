@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+      .box{
+        width: 300px; border: 1px solid #000; height: 50px; margin-bottom: 10px;
+        font-size: 25px; line-height: 2; text-align: center;
+      }
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+  <div class="box"></div>
+    <p>
+      <button class="btn1">이벤트삭제</button>
+      <button class="btn2">이벤트 한번만</button>
+    </p>
+  
+  <script>
+      const dom= document.querySelector('.box');
+      const btn1= document.querySelector('.btn1');
+      const btn2= document.querySelector('.btn2');
+
+      const move=(e)=>{
+        dom.textContent=`x: ${e.offsetX}, ${e.offsetY}` //마우스 좌표값
+      }
+
+      const remove=()=>{
+        dom.removeEventListener('mousemove', move); //동일하게 작성
+      }
+      
+      dom.addEventListener('mousemove', move); //무브라는 함수가 실행되고있는것
+      btn1.addEventListener('click', remove);
+      btn2.addEventListener('click', function(){
+        alert('나는실행');
+      }, {once:true})
+  </script>
+</body>
+</html>
