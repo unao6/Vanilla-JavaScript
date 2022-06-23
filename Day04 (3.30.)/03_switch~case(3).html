@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+        let num=Number(prompt('시간을 24시간으로 입력하세요'));
+
+        switch(true){ //true라고 적으면 무조건 아래로 내려감 (할순 있으나 좋은방법 아님)
+            // switch~case는 명확하게 떨어지는것을 하는게 좋은 것
+            case num<11: alert('아침식사 시간입니다'); break
+            case num<15: alert('점심식사 시간입니다'); break
+            default: alert('저녁식사 아니다');
+        }
+
+    </script>
+</head>
+<body>
+    <pre>
+        ////////////////
+        let num=Number(prompt('숫자 입력'));
+
+        switch(num%2){
+            case 0: alert('짝수'); break
+            case 1: alert('홀수'); break
+            default: alert('숫자가 아니다');
+        //////////////
+        
+    </pre>
+    
+</body>
+</html>

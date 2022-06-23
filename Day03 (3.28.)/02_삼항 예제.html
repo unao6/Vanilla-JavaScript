@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        let userName, userHeight = 0, userWeight = 0, avgWeight, result, reH;
+        userName = prompt('이름을 입력하세요');
+        userHeight = Number(prompt('키를 입력하세요, 숫자만'));
+        userWeight = Number(prompt('몸무게를 입력하세요, 숫자만'));
+        // 애초에 숫자로 받는법! 뒤에 안넘겨도 되도록
+        reH = userHeight / 100;
+        avgWeight = reH * 1.6 * 21;
+
+        result= (avgWeight>userWeight) ? '정상체중' : '과체중'
+        document.write( userName, '님의 결과는 ', result, '입니다.');
+        
+
+
+
+        
+        
+
+
+
+    </script>
+</head>
+<body>
+    <pre>
+        표준체중 = 1.6*1.6*21=53.76
+
+        홍길동은 과체중입니다 / 
+        홍길동은 정상체중입니다
+    </pre>
+
+
+    
+</body>
+</html>

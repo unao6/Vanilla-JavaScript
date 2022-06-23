@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        // 블럭 스코프 (블럭 영역)
+        // const는 선언만 할수 있고 겹치면 안되고 재할당 할 수 없다
+        // 불가능
+        const num1 = 100;
+        console.log(num1);
+        {
+            const num1 = 200;
+            console.log(num1);
+            {
+                const num1 = 300;
+                console.log(num1);
+                {
+                    const num1 = 400;
+                    console.log(num1);
+                }
+                console.log(num1);
+            }
+            console.log(num1);
+        }
+        console.log(num1);
+
+    </script>
+</head>
+<body>
+    <!-- html 내용 -->
+    <script>
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+        let id, userid, level
+        id='ezen';
+        userid=prompt('아이디를 입력하세요');
+        if(id==userid){
+            level=prompt('레벨을 입력하세요');
+            if(5<=level && level<=10){
+                document.write(level+'레벨은 해당 컨텐츠를 사용할 수 있습니다.');
+            }else{
+                document.write(level+'레벨은 해당 컨텐츠에 접근할 수 없습니다.');
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    <pre>
+        id=ezen, userid, level
+        아이디가 일치하면 level 입력받기
+        5~10이면 xx레벨은 컨텐츠 사용o
+        그렇지않으면 xx레벨은 해당 컨텐츠 사용x
+    </pre>
+    
+</body>
+</html>

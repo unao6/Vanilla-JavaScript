@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        setTimeout(function(){
+            //alert('3초 후에 한 번만 실행');
+            //window.open('http://www.naver.com');
+            location.href = 'http://www.naver.com';
+        }, 3000)
+
+        function make(){
+            alert('5초 후 한번만 실행');
+        }
+
+        setTimeout()
+
+    </script>
+</head>
+<body>
+    <pre>
+        타이머 함수 (화살표로 가능)
+        setTimeout(함수명, 시간): 시간 1초 1000 - 오직 한번만 실행
+        setInterval(함수명, 시간): 매시간마다 계속
+
+        setTimeout(function(){ -콜백함수
+            실행문
+        }, 시간차)
+    </pre>
+    
+</body>
+</html>

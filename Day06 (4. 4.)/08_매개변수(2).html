@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        function fx(num){
+            let x= num+10;
+            document.write(`x: ${x}<br>`);
+        }
+
+        fx(100);
+        fx(300);
+        document.write(`==================<br>`);
+
+        //두 수의 합은 40
+        function sum(num1, num2){
+            document.write(`두수의 합: ${num1+num2}<br>`);
+        }
+
+        sum(10,30);
+        document.write(`===================<br>`);
+
+        //세 수의 차는 10
+        function sub(num1,num2,num3){
+            // 이 블럭 스코프 안에서만 살아있기 때문에 매개변수명 겹쳐도 됨
+            document.write(`세 수의 차: ${num1-num2-num3}<br>`);
+        }
+
+        sub(50,30,10);
+        document.write(`===================<br>`);
+
+        //두 수의 곱
+        function mul(num1,num2){
+            document.write(`두 수의 곱: ${num1*num2}<br>`);
+        }
+        mul(40,5);
+
+        
+
+
+    </script>
+</head>
+<body>
+    <pre>
+        
+    </pre>
+    
+</body>
+</html>

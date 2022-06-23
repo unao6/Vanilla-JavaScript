@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+<body>
+    <pre>
+        이런 용도의 템플릿 리터널을 쓴다
+    </pre>
+
+    <script>
+        'use strict'
+
+        const menuList=`
+            <ul class='gnb'>
+                <li><a href="#">MainMenu1</a></li>
+                <li><a href="#">MainMenu2</a></li>
+                <li><a href="#">MainMenu3</a></li>
+                <li><a href="#">MainMenu4</a></li>
+                <li><a href="#">MainMenu5</a></li>
+            </ul>
+        `
+        document.body.innerHTML= menuList;
+
+        function hello(name){
+            return`<h1>나는 ${name}입니다.</h1>`
+        }
+        
+        const divTag= hello('김다미');
+        document.body.innerHTML= menuList+divTag;
+        //document.body.innerHTML= divTag;
+
+        
+
+
+    </script>
+    
+</body>
+</html>

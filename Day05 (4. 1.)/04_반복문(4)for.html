@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        select{width:200px; height:50px; border:1px; padding:15px;}
+    </style>
+    <script>
+        'use strict'
+//더하기 할당 연산자(+=)는 
+//오른쪽 피연산자의 값을 변수에 더한 결과를 다시 변수에 할당합니다.
+    let y='<select>';
+        for(let j=2022; j>=1900; j--){
+            y+='<option>'+j+'년</option>';
+        }
+        y+='</select>';
+        document.write(y);
+
+    let m='<select>';
+        for(let i=1 ; i<=12; i++){
+            m+='<option>'+i+'월</option>';
+        }
+        m+='</select>';
+        document.write(m);
+    
+    let d='<select>';
+        for(let k=1; k<=31; k++){
+            d+='<option>'+k+'일</option>';
+        }
+        d+='</select>';
+        document.write(d);
+
+
+    </script>
+</head>
+<body>
+    <pre>
+        1월~ 12월 출력 - select option
+        1. day 1~31일: select ~ option
+        2. year: 2022년 ~ 1900년
+    </pre>
+    
+</body>
+</html>

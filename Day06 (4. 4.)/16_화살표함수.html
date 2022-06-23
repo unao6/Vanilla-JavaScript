@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        //make();
+
+        /*function make(){
+            alert('안녕하세요');
+        }*/
+
+        const make=() => {
+            alert('안녕하세요');
+        }
+
+        make();
+
+        // --------------------------------
+/*
+        function make1(num){
+            alert(`${num}값`);
+        }*/
+
+        let make1 = num => {
+            alert(`${num}값`);
+        }
+        let make2 = (x,y=10) => {
+            alert(`${x+y}값`);
+        }
+
+        const make3 = (x,y) => {
+            return x+y;
+        }
+        const z = make3(10,30);
+        document.write(z);
+
+        make1(100);
+        make2(100);
+
+    </script>
+</head>
+<body>
+    <pre>
+        화살표함수는 선언하고 밑에서 사용해야한다~ (TDZ영역)
+        일반적인 함수는 선언전에 사용가능
+    </pre>
+    
+</body>
+</html>

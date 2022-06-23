@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+        let day=Number(prompt('숫자를 입력하세요 0~6'));
+        let msg='', dayName='';
+        
+        switch(day){
+            case 0: dayName='일요일'; break;
+            case 1: dayName='월요일'; break;
+            case 2: dayName='화요일'; break;
+            case 3: dayName='수요일'; break;
+            case 4: dayName='목요일'; break;
+            case 5: dayName='금요일'; break;
+            case 6: dayName='토요일'; break;
+            default: dayName='요일없음';
+        }
+        msg='입력한 '+day+'번은 '+dayName+'입니다.';
+        document.write(msg);
+    </script>
+</head>
+<body>
+    <pre>
+        day 변수에 0일때는 일요일, 1일때는 월요일~ 6은 토요일
+        msg 변수에 = 입력한 0번은 일요일입니다.
+    </pre>
+    
+</body>
+</html>

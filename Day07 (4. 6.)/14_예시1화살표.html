@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box {
+            width:400px;
+            height:80px;
+            border: 1px solid #000;
+            font-style: 40px;
+            line-height: 2; text-indent: 20px;
+        }
+        button {
+            width:120px;
+            height: 40px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">??</div>
+    <p>
+        <button class="stop">중지</button>
+        <button class="start">시작</button>
+    </p>
+    <script>
+        'use strict'
+
+        let count=0, timerID=null, interval=1000;
+        let start=document.querySelector('.start');
+        let stop=document.querySelector('.stop');
+        let box=document.querySelector('.box');
+
+        box.innerHTML= count;
+
+        const make = () => {
+            count ++;
+            //if 10이 넘으면 다시 0부터 롤링하기
+            if(count>10){
+                count=0;
+            }
+            box.innerHTML = count;
+        }
+
+        timerID= setInterval(make, interval);
+
+        /* timerID=setInterval(function(){
+            count++;
+            if(count>10) count=0;
+            box.innerHTML=count;
+        }, interval)
+        */
+
+        stop.addEventListener('click',() => {
+            clearInterval(timerID);
+        })
+        start.addEventListener('click',()=>{
+            timerID= setInterval(make, interval);
+        })
+
+    </script>    
+</body>
+</html>

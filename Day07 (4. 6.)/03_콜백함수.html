@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+        //화살표함수
+        const add= (a,b) =>{
+            return a+b;
+        }
+
+        const addResult= (callback) => {
+            document.write('두 수의 합:', callback);
+        }
+
+        addResult(add(10,40));
+
+    </script>
+</head>
+<body>
+    <pre>
+        //function함수
+        function add(a,b){
+            return a+b;
+        }
+
+        function addResult(callback){
+            document.write('두 수의 합:', callback);
+        }
+
+        addResult(add(10,40));
+    </pre>
+    
+</body>
+</html>

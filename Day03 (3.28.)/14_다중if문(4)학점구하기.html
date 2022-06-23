@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+        let name, kor, eng, math, sum, avg, grade;
+        name = prompt('이름을 입력해주세요');
+        kor = Number(prompt('국어 점수를 입력해주세요','0~100'));
+        math = Number(prompt('수학 점수를 입력해주세요','0~100'));
+        eng = Number(prompt('영어 점수를 입력해주세요','0~100'));
+
+        sum = kor+math+eng;
+        avg = sum/3;
+        if(avg>=90){
+            grade = 'A';
+        }else if(90>avg && avg>=80){
+            grade = 'B';
+        }else if(80>avg && avg>=70){
+            grade = 'C';
+        }else{
+            grade = 'F';
+        }
+        document.write(name, '의 평균 점수는', avg, '이고, 학점은', grade, '입니다');
+
+    </script>
+</head>
+<body>
+    <pre>
+        이름
+        국어 kor
+        영어 eng
+        수학 math
+        ==========
+        총점 sum, 평균 avg 
+        학점 : grade
+        평균값이 90 이상이면 A 
+        평균값이 80 이상이면 B
+        평균값이 70 이상이면 C
+        그 외 F
+
+        xxx의 평균 점수는 xx이고 학점은 xx입니다.
+    </pre>
+    
+</body>
+</html>

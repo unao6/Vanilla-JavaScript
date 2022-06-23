@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+        let month = Number(prompt('월을 입력하세요'));
+
+        switch(month){
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12: document.write(month+'월은 31일입니다'); break;
+            case 4:
+            case 6:
+            case 9:
+            case 11: document.write(month+'월은 30일입니다'); break;
+            case 2: document.write(month+'월은 28일입니다'); break;
+            default: document.write('해당 월은 존재하지 않습니다');
+        }
+        */
+
+        let day=0, month=0;
+        month = Number(prompt('달을 입력하세요'));
+        switch(month){
+            case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                day = 31;
+                break;
+            case 4: case 6: case 9: case 11:
+                day = 30;
+                break;
+            case 2:
+                day = 28;
+                break;
+            default:
+                alert('해당 월은 존재하지 않습니다');
+        }
+        
+        if(month>=1 && month<=12){
+            document.write(month+'월은 '+day+'일입니다');
+        }
+
+
+    </script>
+</head>
+<body>
+    <pre>
+        22년 달력 월별 일수 출력하기
+    </pre>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+        function count(x=1){
+            return function(){
+                return x++;
+            }
+        }
+
+
+        let make = count();
+        console.log(make());
+        console.log(make());
+        console.log(make());
+        console.log(make());
+
+    </script>
+</head>
+<body>
+    <pre>
+        make 는 함수자체
+        make()는 함수값. 실행
+    </pre>
+    
+</body>
+</html>

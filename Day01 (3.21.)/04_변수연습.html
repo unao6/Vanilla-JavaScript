@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        //변수 선언 방식1
+        //변수 선언과 동시에 초기화
+        let title1 = '신상명세서';
+        let name1 = '최고은';
+        let age1 = 30;
+        let addr1 ='서울시 송파구 송파대로 567';
+        let tel1 = '010-2871-3156';
+        
+        //서로다른 성격을 연결할 경우: + (변수+문자+숫자)
+        document.write('<h2>' + title1 + '</h2>');
+        document.write('<p> 이름:' + name1 + '</p>');
+        document.write('<p> 나이:' + age1 + '</p>');
+        document.write('<p> 주소:' + addr1 + '</p>');
+        document.write('<p> 전화:' + tel1 + '</p>');
+
+        //변수 선언 방식2
+        //변수 선언
+        let title2='', name2='', age2=0, addr2 ='', tel2='';
+        //값 할당
+        title2 = '신상명세서';
+        name2 = '최고은';
+        age2 = 30;
+        addr2 ='서울시 송파구 송파대로 567';
+        tel2 = '010-2871-3156';
+
+        document.write('<h2>' + title2 + '</h2>');
+        document.write('<p> 이름:' + name2 + '</p>');
+        document.write('<p> 나이:' + age2 + '</p>');
+        document.write('<p> 주소:' + addr2 + '</p>');
+        document.write('<p> 전화:' + tel2 + '</p>');
+
+        //변수 선언 방식3
+        //변수 선언
+        let title3, name3, age3, addr3, tel3;
+        //값 할당
+        title3 = '신상명세서';
+        name3 = '최고은';
+        age3 = 30;
+        addr3 ='서울시 송파구 송파대로 567';
+        tel3 = '010-2871-3156';
+
+        document.write('<h2>' + title3 + '</h2>');
+        document.write('<p> 이름:' + name3 + '</p>');
+        document.write('<p> 나이:' + age3 + '</p>');
+        document.write('<p> 주소:' + addr3 + '</p>');
+        document.write('<p> 전화:' + tel3 + '</p>');
+
+        /* 속도는 처음부터 문자인지 숫자인지 하는 첫번째가 빠름.
+        실제로 일 할때는 그릇을 먼저 만들고, 밑에서 값을 할당하는 아래 방식을 더 많이 사용함.*/
+        
+
+
+    </script>
+</head>
+<body>
+    <!-- html 내용 -->
+    <script>
+        
+    </script>
+    
+</body>
+</html>

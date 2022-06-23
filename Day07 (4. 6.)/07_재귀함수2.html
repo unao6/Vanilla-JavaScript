@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>재귀함수</title>
+    <script>
+        'use strict'
+
+        function gugu( level, depth=1){
+            if(depth > 9){
+                return false;
+            }else{
+                document.write(`${level} X ${depth} = ${level*depth} <br>` );
+                gugu(level, depth+1);
+            }
+        }
+
+
+        let dan= prompt('단을 입력하세요');
+        gugu(dan);
+
+    </script>
+</head>
+<body>
+    <pre>
+        
+    </pre>
+    
+</body>
+</html>

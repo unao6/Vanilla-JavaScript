@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        function fun1(x){
+
+            return function(){
+                return x;
+            }
+        }
+
+        const fun2 = fun1(10)
+        console.log( fun2() );
+        //함수호출
+        document.write(fun2(), '<br>');
+        //함수의 return값 반환
+        document.write(fun2, '<br>');
+
+    </script>
+</head>
+<body>
+    <pre>
+        함수를 인자로 받는 함수,
+        또는 함수를 반환하는 함수
+        고차함수
+
+        Array의 메소드 중에 map, forEach, filter 등등
+             고차함수의 원리
+    </pre>
+    
+</body>
+</html>

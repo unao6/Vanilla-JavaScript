@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        select{width:200px; height:50px; border:1px; padding:15px;}
+    </style>
+    <script>
+        'use strict'
+
+        /*
+        let m='<select>';
+            m+='<option>1월</option>';
+            m+='<option>2월</option>';
+            m+='<option>3월</option>';
+            m+='<option>4월</option>';
+            m+='<option>5월</option>';
+            m+='<option>6월</option>';
+            m+='<option>7월</option>';
+            m+='<option>8월</option>';
+            m+='<option>9월</option>';
+            m+='<option>10월</option>';
+            m+='<option>11월</option>';
+            m+='<option>12월</option>';
+            m+='</select>';
+
+            document.write(m);
+        */
+
+            let m='<select>'
+            for(let i=1 ; i<=12; i++){
+                m+='<option>'+i+'월</option>';
+            }
+            m+='</select>';
+                document.write(m);
+            
+        
+
+        
+
+    </script>
+</head>
+<body>
+    <select>
+        <option>1월</option>
+        <option>2월</option>
+        <option>3월</option>
+        <option>12월</option>        
+    </select>
+    <pre>
+        1월 ~ 12월까지 출력 - select ~ option
+    </pre>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+        function make(x, y, callback){
+            const result = callback(x,y);
+            document.write('두수의 결과: '+ x+y+result+'<br>');
+
+        }
+
+        function sum(a, b){
+            return a+b;
+        }
+
+        function sub(a,b){
+            return a-b;
+        }
+
+        function mul(a,b){
+            return a*b;
+        }
+
+        make(100,200,sum);
+        make(300,200,sum);
+        make(300,200,sub);
+        make(300,200,mul);
+        make(500,14,function(a,b){
+            return a/b;
+        })
+
+    </script>
+</head>
+<body>
+    <pre>
+        
+    </pre>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        // 블럭 스코프 (블럭 영역)
+        //var은 순서대로 내려가서 블럭은 다 무시함.
+        var num1 = 100;
+        console.log(num1);
+        {
+            var num1 = 200;
+            console.log(num1);
+            {
+                var num1 = 300;
+                console.log(num1);
+                {
+                    var num1 = 400;
+                    console.log(num1);
+                }
+                console.log(num1);
+            }
+            console.log(num1);
+        }
+        console.log(num1);
+
+    </script>
+</head>
+<body>
+    <!-- html 내용 -->
+    <script>
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+        /*
+        function sum(min,max){
+            let hap =0;
+            //for min~max까지 반복
+            for (let i=min; i<=max; i++){
+                hap=hap+i;
+            }
+            return hap;
+        }
+        */
+
+        const sum = (min,max) => {
+            let hap =0;
+            //for min~max까지 반복
+            for (let i=min; i<=max; i++){
+                hap=hap+i;
+            }
+            return hap;
+        }        
+        
+
+
+        const result = sum(10, 20);
+        document.write('결과: ' + result);
+
+    </script>
+</head>
+<body>
+    <pre>
+        최솟값, 최대값을 받고
+        최소값, 최댓값 합 구하기 return처리
+    </pre>
+    
+</body>
+</html>
