@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">   
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <script>
+    // callback hell을 함수로 만든 것 (옛날 방식, 노가다)
+    
+        const coffee1 = (callback) => {
+            setTimeout( ()=> {
+                console.log('1번 음료 주문완료');
+                callback();
+            },2000)
+        }
+
+        const coffee2= (callback) => {
+            setTimeout( ()=> {
+                console.log('2번 음료 주문완료');
+                callback();
+            },2000)
+        }
+
+        const coffee3 = (callback) => {
+            setTimeout( ()=> {
+                console.log('3번 음료 주문완료');
+                callback();
+            },2000)
+        }
+
+        console.log('음료 주문하기')
+        coffee1(function(){
+            coffee2(function(){
+                coffee3(function(){
+                    console.log('주문 끝');
+                })
+            })
+        })
+    </script>    
+</body>
+</html>

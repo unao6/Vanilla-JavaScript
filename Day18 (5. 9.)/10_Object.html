@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        const user={
+            name: '김다미',
+            age: 20
+        }
+        
+        const aUser=user; // 객체의 참조값(메모리주소)만 복사가 된다
+        console.log(user);
+        console.log(aUser);
+        aUser.name='김태리';
+        console.log(user);
+        console.log(aUser);
+        console.log('\n');
+
+        // const newUser = Object.assign({}, user); 빈 객체 객체가 복사된다
+        const newUser = Object.assign({}, user);
+
+        newUser.name='최우식';
+        console.log(user);
+        console.log(newUser);
+
+        Object.assign(user, {addr: '서울'});
+        console.log(user);
+
+        const obj = {name:'김태리'};
+        const obj1 = {job: '웹디자인'};
+        const obj2 = {addr: '서울'};
+
+        Object.assign(obj, obj1, obj2);
+        console.log(obj);
+        console.log(obj1);
+        console.log(obj2);
+
+
+
+    </script>
+</head>
+
+<body>
+    
+    <pre>
+        Object.assign(): 객체복제
+        대상을 지정한 객체로 다른 객체의 속성을 복사한다
+        Object.assign(target, ...sources)
+    </pre>>
+</body>
+</html>

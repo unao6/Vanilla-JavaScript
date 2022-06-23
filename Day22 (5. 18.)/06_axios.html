@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        body { margin: 20px; }
+        .box{ width:400px; padding: 20px; border: 1px solid #000; margin-top: 20px;}
+        .box h1 { font-size: 30px; color: hotpink;}
+        .box h2 { font-size: 30px; color: orange;}
+        .box p { font-size: 14px; color: #999;}
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>    
+    <button class="btn">문서 불러오기</button>
+    <class="box">
+        <p>데이터불러오기</p>
+    </div>
+ 
+    <script>
+       const btn = document.querySelector('.btn');
+       const box = document.querySelector('.box');
+
+       btn.addEventListener('click', e=>{
+           e.preventDefault(); //링크마강주는거
+
+          const url = 'data/test.html'
+          axios.get('url')
+                .then(res=>{
+                    box.insertAdjacentHTML('beforeend', res.data);
+                })
+                .catch(error=>{
+                    console.log('파일연결 에러')
+                    console.log(error.res.status)
+                    console.log(error.res.data)
+                })
+                .finally( ()=>{
+                    console.log('데이터 불러오기 완료');
+                })
+       })
+       
+    </script>
+</body>
+</html>

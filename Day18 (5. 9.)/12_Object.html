@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        const dog= {
+            color:'pink',
+            age: 2,
+            name: '치와와'
+        }
+        console.log(dog.hasOwnProperty('color')); //true
+        console.log(dog.hasOwnProperty('age')); //true
+        console.log(dog.hasOwnProperty('name')); //true
+        console.log(dog.hasOwnProperty('addr')); //false
+        console.log(dog.hasOwnProperty('tel'));  //false
+    </script>
+</head>
+
+<body>
+    
+    <script>
+        
+    </script>
+    <pre>
+        Object.hasOwnProperty('property') 값을가지고있냐아니냐판단
+    </pre>
+</body>
+</html>

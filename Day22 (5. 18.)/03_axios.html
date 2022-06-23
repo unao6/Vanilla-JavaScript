@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>    
+ 
+ 
+    <script>
+        //'data/test.json'
+        //액시오스는 좋은점이 데이터를 객체로 바로 가져옴
+        //꼭 json만가져오는게아니고 html이든 ..가져올수있음
+
+        // axios.get('url').then()
+        axios.get('data/test.json')
+        .then(res=>console.log(res.data))
+    </script>
+</body>
+</html>

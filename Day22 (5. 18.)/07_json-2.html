@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        body { margin: 20px; }
+        .box{ width:400px; padding: 20px; border: 1px solid #000; margin-top: 20px;}
+        .box p { font-size: 14px; color: #999;}
+        .box ul {margin-top: 10px;}
+        .box ul li {font-style: 16px; line-height: 30px; border: 1px solid #000; margin-bottom: 10px; text-indent: 10px;}
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>    
+    <button class="btn">문서 불러오기</button>
+    <class="box">
+        <p>데이터불러오기</p>
+        <ul>
+
+        </ul>
+    </div>
+ 
+    <script>
+       const btn = document.querySelector('.btn');
+       const box = document.querySelector('.box');
+       const ul = document.querySelector('.box ul');
+
+       btn.addEventListener('click', e=>{
+           e.preventDefault(); //링크마강주는거
+
+            const url = 'https://jsonplaceholder.typicode.com/posts/3'
+            axios.get(url)
+            .then(res=> {
+                console.log(res.data)
+                const li = document.createElement('li');
+                li.textContent=res.data.title;
+                ul.append(li);
+            })
+       })
+       
+    </script>
+</body>
+</html>

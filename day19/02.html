@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">   
+    <style>
+        
+    </style>    
+</head>
+<body>
+  
+  <script>
+      let arr = ['유재석','김다미','김태리'];
+      let a1 = arr[0]
+      let a2 = arr[1]
+
+      let [ a , [b , c]] = [10,[20,30]];
+      console.log( a , b , c )
+
+      let [ name1 , name2 , name3 ] = ['유재석','김다미','김태리'];
+      console.log( name1 , name2 , name3  )
+      
+      let [ name , ...names  ] = ['유재석','김다미','김태리'];
+      console.log( name )
+      console.log( names )
+
+      const { cat , dog } = { cat:'고양이' , dog:'강아지'}
+      console.log( cat , dog )
+
+      const obj = {
+        name4:'김다미' ,
+        age1 : 20 ,
+        addr1 : '서울'
+      }
+
+      console.log( obj.name4 , obj.age1 , obj['addr1'] );
+
+      //구조분해 , 비구조할당 
+      const { name4 , age1 , addr1 } = obj 
+      console.log( name4 , age1 , addr1 )
+
+      const obj1 = {
+        na : '김태리',
+        age :25,
+        birth : {year:2022 , month:5 , day:11},
+        addr : {
+          city: {
+            cityName:'서울',
+            ward:{
+              wradName:'강남'
+            }
+          }
+        }
+      }
+
+      console.log( '\n') 
+      console.log( obj1.addr.city.cityName ) 
+      console.log( obj1.addr.city.ward.wradName) 
+      console.log( '\n') 
+
+      let { na , age , birth:{year, month,day} , 
+            addr : {
+              city :{
+                cityName,
+                ward: { wradName}
+              }
+            }
+           } = obj1 
+
+       console.log( year )    
+       console.log( month  )    
+       console.log( cityName  )    
+       console.log( wradName  )    
+
+       const output = {
+         name ,
+         age ,
+         year,
+         cityName,
+         wradName
+       }
+       console.log( output )
+
+
+  </script>
+  <pre>
+    구조 분해 할당 ( 비구조할당 )
+    배열이나 객체의 속성을 해체하여 
+    그 값을 개별 변수에 담을 수 있게 하는 JavaScript 표현식입니다.
+  </pre>
+</body>
+</html>

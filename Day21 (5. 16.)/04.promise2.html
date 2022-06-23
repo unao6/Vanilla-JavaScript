@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">   
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <script>
+        const test = new Promise ( (resolve, reject) =>{
+            setTimeout( () => {
+                // resolve('성공 실행');
+                reject('실패');
+            }, 1000);
+        } )
+
+        test.then(
+            function(result){ //resolve부분
+                console.log(result + '완료하기');
+            }
+        ).catch(
+            function(err){ //reject부분
+                console.log(err + '에러 문제있음');
+            }
+        )
+        //1번보다 이게 약간 속도가 빠름
+    </script>
+    <pre>
+        promise
+        Promise객체는 비동기 작업이 맞이할 미래의 완료 또는 실패와 그 결과 값을 나타냅니다.(예측함)
+
+        약속(프로미스)을 반환
+        데이터가 들어올때까지 기다릴게 / 약속할게
+
+        대기(pending): 이행하지도, 거부하지도 않은 초기상태
+        이행(fulfilled): 엿산이 성공적으로 완료됨
+        거부(rejected): 연산이 실패함
+
+        웹브라우저에서 실행해야하는데 서버 데이터를 받아오고 실행해야한다
+
+        1. 데이터 불러오기
+        2. 서버에서 데이터가 들어오기 전에 아래 데이터를 실행시킴
+        3. 서버 데이터가 들어옴
+
+        x = 1
+        y = callServerData() - 서버 호출해서 데이터를 받아오기
+        z = x + y (promise쓰면 y데이터가 들어올때까지 기다렸다가 z실행)
+        결과 z 출력
+    </pre>
+</body>
+</html>

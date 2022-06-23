@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">   
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <script>
+        const coffee = (coffeeName)=>{
+            return new Promise( (resolve, reject)=> {
+                if(coffeeName=='아메리카노'){
+                    resolve('아메리카노를 주문했습니다.');
+                }else{
+                    reject('해당 메뉴는 준비중 입니다');
+                }
+            })
+        }
+
+        coffee('아메리카노')
+        .then(res => console.log(res))//  중간에 ;쓰니까 에러남
+        .catch(rej => console.log(rej)) 
+        .finally( () => console.log('감사합니다.')); //무조건 나오는 finally
+    </script>    
+</body>
+</html>

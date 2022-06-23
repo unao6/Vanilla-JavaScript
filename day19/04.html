@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    
+</head>
+<body>
+  
+  <script>
+      //공통부분 
+      const ani = {        
+        color :'green' ,
+        age : 5 ,
+        run() {
+          console.logG('달리기')
+        }
+      }
+
+      const dog = {
+        color :'pink'
+      }
+      
+      const cat = {
+        color :'hotpink'
+      }
+      //__proto__ : 상속 
+
+      dog.__proto__  = ani ;
+      cat.__proto__  = ani ;
+
+      for( item in dog ) {
+        console.log( item )
+      }
+
+      //비구조할당 
+      const { color , age }  = dog 
+      console.log( age , color )
+
+      const aa = {
+        name :'강아지'
+      }
+      console.log('\n');
+      aa.__proto__ = ani ;
+      for( xx in aa ) {
+        console.log( xx )
+      }
+
+      console.log('\n');
+      //상속된것은 안나옴 
+      const a = Object.keys( aa )
+      const b = Object.values( aa )
+      console.log( a  , b )
+      
+      console.log('\n');
+      
+      for( item in aa ) {
+        if( aa.hasOwnProperty(item) ) {
+            console.log( '원본' , item )
+        }else {
+            console.log( '상속' , item )
+        }
+      }
+
+  </script>
+  <pre>
+    JavaScript는 흔히 프로토타입 기반 언어(prototype-based language)라 불립니다
+    프로토타입(원형) 기반으로 새로운 객체 생성해가는 프로그래밍 방식 
+    생성된 객체는 자신의 프로토타입 갖는다 
+
+    프로토타입은 객체에 보이지 않는 숨겨진 곳에 값을 넣어놓고 값을 꺼내서 쓸수 있게 해준다 
+    메서드들... 
+    .map , push .. 등등 
+    const str ='hi'
+    console.dir(str) 
+    console.dir(str.__proto__)
+
+    const obj = {}
+    const arr =[]
+    const fun = () => {}
+    console.dir( obj.__proto__) 던더프로토 
+
+    console.dir(Array.prototype)
+
+    .__proto__ 접근제어자 
+    prototype을 접근할수 있다 
+
+    브라우저에서 추천하지 않는다 
+
+    추천  : Object.getPrototypeOf()
+  </pre>
+</body>
+</html>

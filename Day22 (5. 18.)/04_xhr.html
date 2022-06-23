@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        body { margin: 20px; }
+        .box{ width:400px; padding: 20px; border: 1px solid #000; margin-top: 20px;}
+        .box h1 { font-size: 30px; color: hotpink;}
+        .box h2 { font-size: 30px; color: orange;}
+        .box p { font-size: 14px; color: #999;}
+    </style>
+</head>
+<body>    
+    <button class="btn">문서 불러오기</button>
+    <class="box">
+        <p>데이터불러오기</p>
+    </div>
+ 
+    <script>
+       const btn = document.querySelector('.btn');
+       const box = documen.querySelector('.box');
+
+       btn.addEventListener('click', e=>{
+           e.preventDefault(); //링크마강주는거
+
+           const xhr = new XMLHttpRequest();
+           const method = 'GET';
+           const url = 'data/test.html';
+
+           xhr.onreadystatechange = e => {
+               //비구조할당 . 꼭이렇게안해도되는데 일부러 이렇게 써보곘음. 옛날에이랬다~
+               const {target} = e;
+
+               if(target.readyState == XMLHttpRequest.DONE){
+                if(target.status == 200){
+                    // alert('test')
+                    const req = target.responseText
+                    box.insertAdjacentHTML('beforeend',req);
+                }else{
+                    const a = parseInt(target.status/100)
+                    if (a==4){
+                        console.log('요청주소가 잘못됨', target.status, target.statusText)
+                    }else if( a==5){
+                        console.log('서버응답이없음', target.status, target.statusText)
+                    }else{
+                        console.log('요청에실패', target.status, target.statusText)
+                    }
+                }
+            }
+           }
+
+           xhr.open(method, url);
+           xhr.send();
+       })
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:500px; height: 20px; font-size: 16px; padding: 10px; border: 1px solid #000;
+            margin: 10px; font-weight: 600px;
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+
+<body>
+        <div class="box">?</div>
+        <div class="box">?</div>
+        <div class="box">?</div>
+        <div class="box">?</div>
+        <div class="box">?</div>
+        <div class="box">?</div>
+        <div class="box">?</div>
+        <div class="box">?</div>
+        <div class="box">?</div>
+        <div class="box">?</div>
+
+    <script>
+        let box= document.querySelectorAll('.box');
+        const user= {
+            name: '김다미',
+            age: 20,
+            gender: 'female',
+            job: '웹퍼블리셔'
+        }
+        const arr= [
+            ['name', '김다미'],
+            ['age', 20],
+            ['gender', 'female'],
+            ['job', '웹퍼블리셔']
+    ]
+
+        box[0].innerHTML = Object.keys(user); // 결과: name,age,gender,job
+        box[1].innerHTML = Object.values(user); // 김다미,20,female,웹퍼블리셔
+
+        box[2].innerHTML = Object.entries(user); // name,김다미,age,20,gender,female,job,웹퍼블리셔
+        console.log(Object.entries(user));
+
+        box[3].innerHTML = Object.fromEntries(arr); // [object Object]
+        console.log(Object.fromEntries(arr));
+      
+
+
+    </script>
+
+    <pre>
+        Object.keys() : 속성(키) 뽑아오기
+        Object.values() : 값 뽑아오기
+        Object.entries() : 키/값을 배열로 처리
+        Object.fromEntries() : 키/값의 쌍을 객체로 처리
+    </pre>
+</body>
+</html>

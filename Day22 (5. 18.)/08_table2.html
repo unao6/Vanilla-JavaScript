@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .box{width: 400px; border: 1px solid #000; padding: 10px;}
+
+        table th, 
+        table td{
+            padding: 10px 30px; border: 1px solid #000;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>    
+    <button class="btn">불러오기</button>
+    <div class="box">
+        <table>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>이름</th>
+                    <th>주소</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+ 
+    <script>
+       const btn = document.querySelector('.btn');
+       const tbody = document.querySelector('tbody');
+
+       btn.addEventListener('click', function(){
+           const url = 'data/list.json';
+           axios.get(url)
+                .then(res => {
+                    console.log(res.data.item); //.item까지해야 데이터가 그대로들어옴!
+                    gallery(res.data.item)  // 함수로빼기
+                })
+       })
+
+       function gallery(data){
+           let tr = data.map(item=> 
+           `
+            <tr>
+                <td>${item.no}</td>
+                <td>${item.name}</td>
+                <td>${item.addr}</td>
+            </tr>
+           `)
+
+           tbody.innerHTML=tr.join('');  //이상한 쉼표같은게 생기기때문에, 조인으로공백처리
+       }
+       
+    </script>
+</body>
+</html>

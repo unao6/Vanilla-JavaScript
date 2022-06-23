@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+        
+</head>
+<body>
+  
+  <script>
+      function Man( name ) {
+        this.name  = name ;
+      }
+
+      //공통 - 상속 
+      Man.prototype.age = 10 ;
+      Man.prototype.color = 'pink' ;
+      Man.prototype.run =function(){
+        console.log(this.name ,'오늘도 달린다')
+      }
+
+      const aa = new Man('최우식')
+      const bb = new Man('김태리')
+      console.log( aa.name, aa.color , aa.age  )
+      console.log( bb.name, bb.color , bb.age  )
+      aa.run() 
+      bb.run() 
+
+      function User( name ) {
+        this.name  = name 
+      }
+
+      User.prototype = {
+        addr :'서울' ,
+        color :'pink' ,
+        job :'웹 퍼블리셔' ,
+        work() {
+          console.log(this.name,'오늘도 일한다')
+        }
+      }
+      console.log( '\n' )
+      const user1  = new User('김다미')
+      const user2  = new User('유재석')
+      
+      console.log( user1.name, user1.color , user1.job  )
+      console.log( user2.name, user2.color , user2.job  )
+
+  </script>
+  <pre>
+    
+  </pre>
+</body>
+</html>

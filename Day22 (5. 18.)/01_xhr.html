@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+
+    </style>
+</head>
+<body>    
+ 
+ 
+    <script>
+        //비동기통신의기본이고 옛날부터썼고 좋은방버은아님
+        //정해져있는 내용임!!(기본형식이고 오픈샌드가있어야되고 겟방식)
+       const xhr = new XMLHttpRequest();
+       xhr.onreadystatechange = e => {
+           if(xhr.readyState==xhr.DONE){
+              if(xhr.status==200){
+                  console.log(xhr.response);
+              }else{
+                console.log('에러');
+              }
+           }
+       }
+       
+       xhr.open('GET', 'data/test.json');
+       xhr.send();
+    </script>
+</body>
+</html>

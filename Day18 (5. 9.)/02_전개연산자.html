@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:500px; height: 20px; font-size: 16px; padding: 10px; border: 1px solid #000;
+            margin: 10px; font-weight: 600px;
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+
+<body>
+        <div class="box">?</div>
+        <div class="box">?</div>
+        <div class="box">?</div>
+        <div class="box">?</div>
+        <div class="box">?</div>
+        <div class="box">?</div>
+        <div class="box">?</div>
+        <div class="box">?</div>
+        <div class="box">?</div>
+        <div class="box">?</div>
+
+    <script>
+        let box= document.querySelectorAll('.box');
+        let result= '';
+
+        const names= ['최창규', '박영금', '최고은', '최준영', '포도'];
+        const foods= ['피자', '햄버거', '치킨', '고기', '우동'];
+
+        box[0].innerHTML= names.concat(); //복사하는 개념, 원본에 해당하는 것을 훼손하지 않고 만드는것에 중요
+        box[1].innerHTML= [...foods]; //안에 해당하는 것들의 값만 카피해옴 쩜세개쓰면. 사실 위랑 아래랑 같은개념
+        box[2].innerHTML= names.concat('강호동').concat(foods); //원본을 훼손하지않고 데이터 추가 가능
+        box[3].innerHTML= [...names, '김진주', '송혜교', ...foods];
+
+        //객체 변경, 수정하는 방법
+        const dog= {name:'치와와', age:3};
+        const dog1= {...dog};
+        const dog2= {...dog, name:'푸들푸들', age:5};
+
+        box[4].innerHTML= Object.entries(dog);
+        box[5].innerHTML= Object.entries(dog1);
+        box[6].innerHTML= Object.entries(dog2);
+
+        //배열객체
+        const data= [
+            {id:1, name:'김철수'},
+            {id:2, name:'김다미'},
+            {id:3, name:'유재석'}
+        ]
+
+        const data1 = data.concat();
+        const data2 = [...data];
+        const data3 = data.concat({id:3, name:'김태리'}); //추가
+        const dat4 = [...data, {id:4, name:'강호동'}];
+
+        box[7].innerHTML= data1.map(item=> {
+            return `${item.id})${item.name}`;
+        })
+        box[8].innerHTML= data2.map(item=>{
+            return `${item.id})${item.name}`;
+        })
+        box[9].innerHTML= data3.map(item=>{
+            return `${item.id})${item.name}`;
+        })
+        //결과가 1개일때: 일급함수 -> 축약해서 한줄로 작성 가능
+        box[10].innerHTML= data4.map(item=> `${item.id})${item.name}`);
+
+    </script>
+
+    <pre>
+        전개연산자, 스프레드연산자, 펼치기연산자
+        ...전개연산자
+        객체 안에 키 또는 배열 안에 값 등을 복사하는 개념
+    </pre>
+</body>
+</html>

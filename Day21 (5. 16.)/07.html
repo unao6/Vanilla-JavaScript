@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">   
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <script>
+        async function make1() {
+            // return Promise.resolve('홍길동')
+            return Promise.reject(e)
+        }
+        // console.log( make1() )
+
+        async function make2(){
+            throw new Error('에러입니다.')
+        }
+        
+        make1().then(name=>{
+            console.log(name)
+        }).catch(error=>{
+            console.log(error)
+        })
+
+    </script>   
+    <pre>
+        async function
+        함수 앞에  async: Promise 가 된다 - 가독성이 더 좋다
+        await : .then() 와 같다
+        단 async 함수에 안에 await가 존재한다
+
+
+        뻥션앞에 어싱크가드렁가면 프로미스랑 같은 역할을 한다~~
+    </pre> 
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">   
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <script>
+        function abc(){
+            console.log('실행');
+        }
+
+        try{
+            ab();
+        }catch(e){
+            //try에서 에러가 발생할 경우
+            console.log(e);
+            console.log('\n');
+            console.log(e.name);
+            console.log(e.message);
+            console.log('에러발생메세지');
+        }
+        console.log('정상메세지');
+    </script>    
+    <pre>
+        try...catch
+        코드상의 중간값 체크를 하거나
+        에러값 체크- console.log 출력 / alert
+    </pre>
+</body>
+</html>

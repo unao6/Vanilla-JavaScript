@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">   
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <script>
+    
+        const coffee = new Promise((resolve, reject)=> {
+                setTimeout( ()=>{
+                    // resolve('음료 주문완료');
+                    reject('실패');
+                    
+                },2000)
+            })
+
+
+        console.log('음료 주문하기')
+        coffee.then( res=>{
+            console.log(res);
+        }).catch( (error)=>{
+            console.log(error)
+        }).finally( ()=>{
+            console.log('마침');
+        })
+        
+
+
+    </script>    
+</body>
+</html>

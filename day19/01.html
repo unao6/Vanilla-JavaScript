@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+      span {
+        display: inline-block; border-radius: 20px; padding: 10px 30px; background: #efefef; margin-right: 10px;
+      }
+    </style>    
+</head>
+<body>
+  <ul>
+    <li>??</li>
+    <li>??</li>
+    <li>??</li>
+    <li>??</li>
+    <li>??</li>
+  </ul>
+
+  <div class="box1"></div>
+  <div class="box2"></div>
+
+  <script>
+      const box1  = document.querySelector('.box1');
+      const box2  = document.querySelector('.box2');
+      const li  = document.querySelectorAll('li');
+
+      const names = ['김태리','김다미','남주혁','고민지'];
+
+      const make  = ( x , y ) => {
+         box1.innerHTML  = `Hello ${x} / ${y}`
+      }
+
+      const make1 = (...rest ) => {
+        let result  = ''
+        rest.forEach( item => {
+          result += item + '/';
+          box1.innerHTML = `Hello ${result} `
+        })
+      }
+
+      make1( ...names );
+
+
+      let obj  = {
+        name :'김태리',
+        age :25 ,
+        addr :'서울',
+        //맨뒤 후행쉼표
+      }
+
+      let obj1  = { ...obj };
+      // console.log( obj1 );
+     
+
+      let v = Object.values( obj1 );
+      console.dir( v )
+
+      let result  = v.map( item => `<span> #${item} </span>`)
+      box2.innerHTML  = result.join('');
+
+      // li.forEach( item => item.innerHTML = `<em>Menu</em>`);
+      // console.log( li )
+
+      let lis = [ ...li ];
+      console.log( lis )
+      lis.map( item => {
+        return item.innerHTML  = `<em>Menu</em>`
+      })
+
+  </script>
+  <pre>
+    또한 Array.from() 을 사용하여 Array 로 변환 할 수도 있습니다.
+  </pre>
+</body>
+</html>

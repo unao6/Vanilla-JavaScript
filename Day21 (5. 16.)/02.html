@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">   
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <script>
+
+        let x = '';
+        try {
+            //개발자가 직접 에러를 발생시킬 수 있음.
+            if(x=='')throw '빈값입니다.'
+
+
+            let y = x +50;
+            console.log(y);
+        }catch(err){
+            console.log(`에러: ${err}`);
+        }finally{
+            //무조건 실행시킴(트라이가 실행되든, 에러가 실행되든)
+            console.log('try/catch문 마지막에 무조건 실행');
+        }
+    </script>    
+</body>
+</html>

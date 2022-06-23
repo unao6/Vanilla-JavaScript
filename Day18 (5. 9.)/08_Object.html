@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        const arr = [10, 20, 30];
+        arr[0]=100;
+        console.log(arr); // 이러면 10이 100으로 수정이 되는데, 못하게 막고싶을때!
+
+        Object.freeze(arr); // 이러면 200으로 안바껴요~
+        arr[0]=200;
+        console.log(arr);
+
+        const obj1 = {}
+        obj1.title = '김태리 신상명세서';
+        console.log(obj1);
+        Object.freeze(obj1);
+        obj1.title= '김다미 신상명세서';
+        console.log(obj1);
+
+        let cnt=0;
+        const make= (obj, num)=> {
+            while(true){
+                console.log(obj);
+
+                if(obj.age> num){
+                    obj=Object.freeze(obj);
+                }
+                obj.age+=1;
+
+                cnt++;
+                if(cnt>35){
+                    break;
+                }
+            }
+        }
+
+        let obj2= { name: '최우식', age: 25};
+        make(obj2, 30);
+
+
+    </script>
+</head>
+
+<body>
+    
+    <script>
+        
+    </script>
+    <pre>
+        Object.freeze() : 동결, 객체를 수정할 수 없도록 만드는 것 
+        
+    </pre>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:500px; height: 20px; font-size: 16px; padding: 10px; border: 1px solid #000;
+            margin: 10px; font-weight: 600px;
+        }
+    </style>
+    <script>
+
+    </script>
+</head>
+
+<body>
+        <div class="box">?</div>
+        <div class="box">?</div>
+        <div class="box">?</div>
+        <div class="box">?</div>
+        <div class="box">?</div>
+        <div class="box">?</div>
+        <div class="box">?</div>
+        <div class="box">?</div>
+        <div class="box">?</div>
+        <div class="box">?</div>
+
+    <script>
+        let box= document.querySelectorAll('.box');
+        let result='';
+        const obj= {
+            a:10,
+            b:20,
+            c:30,
+            d:40,
+            e:50,
+        }
+
+
+
+        box[0].innerHTML= Object.keys(obj);
+        box[1].innerHTML= Object.values(obj).map(item=> item+100); // 값에 100 더해서 출력
+        box[2].innerHTML= Object.values(obj).filter(item=> item>=30); // 30이상인 값만 출력
+        box[3].innerHTML= Object.values(obj).filter(item=> item!=30); // 30을 제외하고 출력
+        box[4].innerHTML= Object.values(obj).map(item=> item+50).reduce( (prev, curr)=> prev+curr); // 값에 50씩 더하고 누적 합 구하기
+        
+        box[5].innerHTML= Object.entries(obj);
+        //Object.entries(obj) 이용해서 값을 3으로 나누어 떨어지는 것마 ㄴ출력하세요
+        box[6].innerHTML= Object.entries(obj).filter(item=> item[1]%3==0); // 1행당 열이 두개이므로 두번째값을 표시해줘야함!
+
+
+      
+
+
+    </script>
+
+    <pre>
+        Object.keys() : 속성(키) 뽑아오기
+        Object.values() : 값 뽑아오기
+        Object.entries() : 키/값을 배열로 처리
+        Object.fromEntries() : 키/값의 쌍을 객체로 처리
+
+    </pre>
+</body>
+</html>

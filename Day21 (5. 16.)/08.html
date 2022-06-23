@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">   
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <script>
+        function getName(name){
+            return new Promise( (resolve, reject)=>{
+                setTimeout( ()=>{
+                    resolve(name)
+                }, 2000)
+            })
+        }
+
+        // async function showName(){
+        //     const result = await getName('홍길동'); //await는 then하고 똑같다고 설명함
+
+        //     console.log(result);
+        // }
+
+        const showName= async()=>{  //이렇게 써도 똑같음
+            const result = await getName('홍길동');
+            console.log(result);
+        }
+
+        showName();
+    </script>    
+</body>
+</html>

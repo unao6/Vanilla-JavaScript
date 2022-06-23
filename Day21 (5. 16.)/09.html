@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">   
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <script>
+        const coffee = (name) => {
+            return new Promise( (resolve, reject) => {
+                if( name== '아메리카노'){
+                    resolve('아메리카노를 주문했습니다.')
+                }else{
+                    reject('메뉴는 준비중')
+                }
+            })
+        }
+
+        async function menu(){
+            // const menu = async() => {
+                try {
+                    const result = await coffee('아메리카노')
+                    console.log(result)
+                }catch(e){
+                    console.log(e)
+                }finally{
+                    console.log('감사')
+                }
+            }
+        
+        menu()
+    </script>    
+</body>
+</html>

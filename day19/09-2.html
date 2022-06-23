@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+  
+</head>
+<body>
+  
+  <script>
+    //공통
+    class Ani {
+      constructor( color ) {
+            this.color = color 
+            this.age  = 4
+          }
+          run() {
+            console.log('오늘도 달린다')
+          }
+          eat() {
+            console.log('오늘도 먹는다')
+          }
+    }
+
+
+     class Dog extends Ani {
+          /*
+          //생략가능 
+           constructor( ...args ) {
+             //부모 
+             super( ...args )
+           } */
+          sleep() {
+            console.log( '나는 잠잔다')
+          } 
+     }
+     class Cat extends Ani {        
+          swim() {
+            console.log( '나는 수영한다')
+          } 
+     }    
+
+     const dog  = new Dog('pink')
+     const cat  = new Cat('green')
+
+     console.log( dog.color , dog.age )
+     console.log( cat.color , cat.age )
+
+     dog.run()
+     cat.run()
+
+     dog.eat()
+     cat.eat()
+
+     dog.sleep()
+
+     cat.swim()
+
+  </script>
+  <pre>
+    class 클래스명 {
+      constructor() {}
+      method() {}
+    }
+    new 클래스명()
+    class 키워드 
+    객체지향 프로그래밍에서 사용하는 다양한 기능 
+    객체를정의 상태(멤버변수)와 메서드(함수)로 구성 
+    Class는 객체를 생성하기 위한 템플릿
+  </pre>
+</body>
+</html>

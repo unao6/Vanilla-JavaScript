@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        const food= {
+            name: '빵',
+            statement: '좋음',
+            brand: '삼립'
+        }
+
+        food.test='값'; // 추가
+        console.log(food);
+
+        delete food.test; // 삭제
+        console.log(food);
+
+        food.name='식빵' //수정
+        console.log(food);
+
+        
+
+
+        Object.seal(food);
+
+        food.test='값'; // 추가
+        console.log(food);
+
+        delete food.test; // 삭제
+        console.log(food);
+
+        food.brand='파리바게트' //수정
+        console.log(food);
+    </script>
+</head>
+
+<body>
+    
+    <pre>
+        Object.seal() : 봉인/ 추가 수정 삭제 아무것도 못하게.
+    </pre>
+</body>
+</html>

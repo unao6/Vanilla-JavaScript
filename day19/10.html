@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  
+  
+</head>
+<body>
+  
+  <script>
+    //공통
+    class Ani {
+      constructor( color ) {
+            this.color = color 
+            this.age  = 4
+          }
+          run() {
+            console.log('오늘도 달린다')
+          }
+          eat() {
+            console.log('오늘도 먹는다')
+          }
+    }
+
+
+     class Dog extends Ani {           
+          sleep() {
+            console.log( '나는 잠잔다')
+          } 
+          run(){
+            console.log('끝날시간입니다')
+          }
+     }
+    
+     class Cat extends Ani {           
+          sleep() {
+            console.log( '나는 잠잔다')
+          }
+          run() {
+            console.log('저녁을 먹는다')
+          }
+     }
+    
+
+     const dog  = new Dog('pink')   
+     const cat  = new Cat('pink')   
+
+     console.log( dog.color , dog.age )
+     dog.run() 
+     cat.run()
+     
+
+  </script>
+  <pre>
+     
+  </pre>
+</body>
+</html>

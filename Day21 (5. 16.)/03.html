@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">   
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+
+    <script>
+        console.log('시작');
+        setTimeout( () => {
+            console.log('1번 실행');
+            setTimeout( () => {
+                console.log('2번 실행');
+                setTimeout( () => {
+                    console.log('3번 실행');
+                        setTimeout( () => {
+                        console.log('4번 실행');
+                    },2000);
+                },2000);
+            },2000);
+        },2000);
+
+    </script>    
+    <pre>
+        동기형
+        javascript는 절차형: 위에서 아래로 순서대로
+        console.log(1);
+        console.log(2);
+        console.log(3);
+        console.log(4);
+        console.log(5);
+
+
+
+        비동기실행
+        console.log('시작');
+        setTimeout( ()=>{
+            console.log('중간실행');
+        },3000)
+
+        console.log('마지막실행');
+        //////// 시작>마지막실행>중간실행 나타남.
+
+        그럼 해결하려면 어떻게 할까?
+
+        1. 옛날에 억지로 하던 버전
+        console.log('시작');
+        function make( callback) {
+            setTimeout( ()=>{
+            console.log('중간실행');
+            callback();
+            },3000)
+        }        
+        make( ()=> console.log('마지막실행') );
+
+        2. callback hell. 이것또한 예전작업
+        console.log('시작');
+        setTimeout( () => {
+            console.log('1번 실행');
+            setTimeout( () => {
+                console.log('2번 실행');
+                setTimeout( () => {
+                    console.log('3번 실행');
+                        setTimeout( () => {
+                        console.log('4번 실행');
+                    },2000);
+                },2000);
+            },2000);
+        },2000);
+
+        3. 그래서 나온 promise/ async
+
+        4. 최신버전은 다음주에,, 펫치 애시오스??
+
+    </pre>
+</body>
+</html>
