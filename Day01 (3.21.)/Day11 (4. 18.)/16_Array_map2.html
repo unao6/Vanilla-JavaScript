@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+        const data = [
+            {id:1, name:'김00', age:20, city:'제주'},
+            {id:2, name:'이00', age:19, city:'경기'},
+            {id:3, name:'박00', age:14, city:'제주'},
+            {id:4, name:'최00', age:28, city:'울산'},
+            {id:5, name:'정00', age:30, city:'서울'},
+            {id:6, name:'문00', age:29, city:'경기'},
+        ]
+
+        const data1=data.map(function(current, idx, arr){ //용어는 뭘 써도 상관없음
+            console.log(current, idx, arr);
+        })
+        //-> 갯수만큼 출력해주는거고 인덱스번호고 어레이구나~
+
+        //아직안배움
+        const data2=data.map(item=>{
+            if(item.id==1){
+                return{
+                    ...item,  // 데이터를 수정하고 업데이트 할 때도 이렇게 map사용 가능
+                    name:'유재석',
+                    age: 35,
+                    city: '서울'
+                }
+            }else{
+                return item
+            }
+        })
+        console.log(data2);
+        console.log('////////////////');
+
+        //나이가 3의 배수이면 '3의 배수'출력, 그렇지 않으면 그대로 출력
+        const data3= data.map(item=>{
+            if(item.age%3==0){
+                return '3의배수';
+            }else{
+                return item;
+            }
+        })
+        console.log(data3);
+        console.log('////////////////');
+        
+
+    </script>
+</head>
+<body>
+    <pre>
+        
+    </pre>
+    
+</body>
+</html>

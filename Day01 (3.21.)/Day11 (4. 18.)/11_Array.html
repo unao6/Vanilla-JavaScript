@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+        const data = [
+            {name:'김00', age:20, city:'제주'},
+            {name:'이00', age:19, city:'경기'},
+            {name:'박00', age:14, city:'제주'},
+            {name:'최00', age:28, city:'울산'},
+            {name:'정00', age:30, city:'서울'},
+            {name:'문00', age:29, city:'경기'},
+        ]
+
+        //1.name키 글자하나 검색: 김
+        //indexOf, includes 검색- filter
+        // 화면에 출력 for~of
+
+        const txt='김';
+        const data1_1=data.filter(function(item){
+            return(item.name.indexOf(txt)!=-1)
+        })
+
+        const data1_2=data.filter((item)=>{
+            return(item.name.indexOf(txt)!=-1)
+        })
+        const data1_3=data.filter((item)=>item.name.indexof(txt)!=-1);
+
+        const data1_4=data.filter(function(item){
+            return item.name.includes(txt)
+        })
+
+        const data1_5=data.filter(item=>{
+            return item.name.includes(txt)
+        })
+        const data1_6=data.filter(item=>item.name.includes(txt));
+
+        for(let key of data1_6){
+            document.write(key.name, key.age, key.city, '<br>');
+        }
+
+    </script>
+</head>
+<body>
+    <pre>
+        왜안되는지 모르겠음. 이페이지 이해도 못함.
+    </pre>
+    
+</body>
+</html>

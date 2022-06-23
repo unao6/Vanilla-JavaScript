@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+        let str = 'Good morning afternoon evening DOG CAT Naver';
+        let txt = 'dog'; //찾는 글
+        let result1 = ''
+        let result2 = ''//결과
+
+        // 영문은 대소문자 구별한다
+        if(str.indexOf(txt)!=-1){
+            document.write(` ${txt} 찾음 <br>`);
+        }else{
+            document.write(` ${txt} 찾지 못함 <br>`);
+        }
+
+        if(str.includes(txt)){
+            document.write(` ${txt} 찾음 <br>`);
+        }else{
+            document.write(` ${txt} 찾지 못함 <br>`);
+        }
+
+        // 소문자나 대문자로 통일해서 비교하기
+        if(str.toLowerCase().indexOf(txt.toLowerCase())!=-1){
+            document.write(` ${txt} 찾음 <br>`);
+        }else{
+            document.write(` ${txt} 찾지 못함 <br>`);
+        }
+
+        if(str.toLowerCase().includes(txt.toLowerCase())){
+            document.write(` ${txt} 찾음 <br>`);
+        }else{
+            document.write(` ${txt} 찾지 못함 <br>`);
+        }
+
+
+    </script>
+</head>
+<body>
+    <pre>
+        dog 찾음 / dog 찾지 못함
+
+        indexOf / includes
+    </pre>
+    
+</body>
+</html>

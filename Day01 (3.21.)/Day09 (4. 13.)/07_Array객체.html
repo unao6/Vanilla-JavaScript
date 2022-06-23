@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        let arr1 = new Array(10,20,30,40,50); //주로 값이 짧을 때 한번에 선언
+        let arr2 = [10,20,30,40,50];
+
+        let arr3 = []; // new Array();
+        arr3[0]='조세호';
+        arr3[1]='김태리';
+        arr3[2]='김다미';
+        arr3[3]='유재석';
+
+        document.write(`${arr1} <br>`);
+        document.write(`${arr2} <br>`);
+        document.write(`${arr3} <br>`);
+
+        document.write(`${typeof arr1} <br>`);
+        document.write(`${typeof arr2} <br>`);
+        document.write(`${typeof arr3} <br>`);
+
+        document.write(`${arr3[3]} <br>`);
+        document.write(`${arr3[0]} <br>`);
+        document.write(`${arr1[1]} <br>`);
+
+        document.write(Array.isArray(arr3), '<br>');
+        document.write(Array.isArray('유재석'), '<br>');
+
+        //indexOf
+        document.write(arr3.indexOf('김다미'), '<br>');
+        document.write(arr3.indexOf('송혜교'), '<br>');
+        //includes
+        document.write(arr3.includes('김다미'), '<br>');
+        document.write(arr3.includes('송혜교'), '<br>');
+        //속성: .length (갯수)
+        document.write(arr1.length, '<br>');
+        document.write(arr3.length, '<br>');
+
+        //배열객체  (배열 안의 객체)
+        const data=[
+            {id:1, name:'김00', age:20},
+            {id:2, name:'이00', age:23},
+            {id:3, name:'박00', age:31},
+            {id:4, name:'최00', age:42},
+        ]
+
+        document.write(data[0].id, data[0].name, data[0].age,'<br>');
+
+        for(let i=0; i<data.length; i++){
+        document.write(data[i].id, data[i].name, data[i].age, '<br>');
+        }
+
+        for(let item of data){
+            document.write(item.id, item.name, item.age, '<br>');
+            document.write(item['id'], item['name'], item['age'], '<br>');
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <pre>
+        Array: 비슷한, 동일한 성격의 값을 나열 
+
+        일상
+        버스타기: 목표          : Array
+        사람이 많다(3사람 이상) : 데이터가 많다 (3개 이상)
+        줄세워라, 나열해라      : 줄세워라, 나열해라
+        빠르게 탈 수 있다       : 처리속도가 빠르다 (삭제, 수정, 추가 용이)
+
+        형식)
+        배열명 = new Array() / 배열명 = [] : 선언
+        배열명 => 사용자 정의 이름 ( 변수규칙과 동일 )
+
+        배열명 = new Array()
+        배열명[0] = 값
+        배열명[1] = 값
+        배열명[2] = 값
+        배열명[3] = 값
+
+        배열명 = []
+        배열명[0] = 값
+        배열명[1] = 값
+        배열명[2] = 값
+        배열명[3] = 값
+
+        배열명 = [값, 값, 값, 값]
+
+        배열명 = new Array(값, 값, 값, 값)
+
+        ex)
+        let a = 10
+        let b = 20
+        let c = 30
+        let d = 40
+
+        let arr=[] / new Array()
+        arr[0]=10
+        let[1]=20
+        let[2]=30
+        let[3]=40
+
+        let arr = [10,20,30,40]
+        let arr = new Array(10,20,30,40)
+
+        Array.isArray() 메서드는 인자가 Array인지 판별합니다.
+        객체가 Array라면 true를 반환하고, 아니라면 false를 반환합니다.
+
+        Array.prototype.indexOf()
+        indexOf() 메서드는 배열에서 지정된 요소를 찾을 수 있는 첫 번째 인덱스를 반환하고 존재하지 않으면 -1을 반환합니다.
+
+        Array.prototype.includes()
+        includes() 메서드는 배열이 특정 요소를 포함하고 있는지 판별합니다.
+    </pre>
+    
+</body>
+</html>

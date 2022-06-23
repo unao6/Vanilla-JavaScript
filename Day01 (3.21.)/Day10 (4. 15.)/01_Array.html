@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+        let names = ['고민지', '김다미', '김태리', '남주혁', '최우식', '송혜교']
+        let len = names.length;
+        let username = prompt('이름을 조회', '조회할 이름을 입력');
+
+        //for
+        for (let i = 0; i<names.length; i++){
+            if(username==names[i]){
+                document.write(username,'을 검색했습니다. <br>');
+                break;
+            }
+        }
+
+        //for~of
+        for (let item of names){
+            if(username==item){
+                document.write(username,'을 검색했습니다. <br>');
+                break;
+            }
+        }
+
+        //for~in //안되나봄?
+        for(let idx in names){
+            if(username==names[i]){
+                document.write(username,'을 검색했습니다. <br>');
+                break;
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    <pre>
+        
+    </pre>
+    
+</body>
+</html>

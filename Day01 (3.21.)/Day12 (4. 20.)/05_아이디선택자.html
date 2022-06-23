@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <title>Document</title>
+    <style>
+
+    </style>
+    </head>
+<body>
+    <h2 id="box1">제목태그</h2>
+    <h2 id="box2">제목태그</h2>
+    <h2 id="box3">제목태그</h2> 
+
+    <script>
+        'use strict'
+        const box1= document.getElementById('box1');
+        const box2= document.getElementById('box2');
+        const box3= document.getElementById('box3');
+
+        //요소.style.css속성= '값'
+        //css속성: fontSize, textIndent, backgroundColor .. 하이픈 빼야함
+        //픽셀단위도 명확하게 다 써야함
+
+        box1.innerHTML= '나는 아이디1';
+        box2.innerHTML= '나는 아이디2';
+        box3.innerHTML= '나는 아이디3';
+
+        box1.style.color='tomato';
+        box1.style.fontSize='40px';
+        box1.style.backgroundColor='yellow';
+        box1.style.textIndent='20px';
+        box1.style.border='1px solid #000';
+        box1.style.marginBottom= '20px';
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        'use strict'
+
+    </script>
+</head>
+<body>
+    <!-- div#box>ul>li{??}*4 -->
+    <div id="box">
+        <ul>
+            <li>??</li>
+            <li>??</li>
+            <li>??</li>
+            <li>??</li>
+        </ul>
+    </div>
+    <button onclick="onColor()">스타일넣기</button>
+    <script>
+        const onColor=()=>{
+            let dom= document.querySelectorAll('#box li');
+            for(let i in dom){
+                dom[i].style.backgroundColor="yellow";
+                dom[i].style.marginBottom="10px";
+                dom[i].style.fontSize="30px";
+                // dom[i].innerHTML='MenuList'+i;
+                dom[i].innerHTML=`MenuList${i}`;
+
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

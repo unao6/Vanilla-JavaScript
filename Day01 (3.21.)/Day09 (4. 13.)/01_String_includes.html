@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+        
+        let str = '안녕하세요 홍길동 입니다. 오늘은 수요일 입니다.';
+
+        let a = str.includes('안');
+        let b = str.includes('세');
+        let c = str.includes('홍길동');
+        let d = str.includes('송혜교');
+
+
+        document.write(`${a} <br>`);
+        document.write(`${b} <br>`);
+        document.write(`${c} <br>`);
+        document.write(`${d} <br>`);
+
+        //홍길동이 있으면 해당문자를 검색했음 / 없으면 해당 문자를 찾을 수 없습니다.
+
+        if(str.includes('홍길동')){
+            document.write('해당 단어를 검색합니다.<br>');
+        }else{
+            document.write('해당 단어를 검색 할 수 없음.<br>');
+        }
+
+    </script>
+</head>
+<body>
+    <pre>
+        String.prototype.includes()
+        하나의 문자열이 다른 문자열에 포함되어 있는지를 판별하고, 결과를 true 또는 false 로 반환합니다.
+
+        구문
+        str.includes(searchString[, position])
+
+        매개변수
+        searchString
+        이 문자열에서 찾을 다른 문자열.
+        position Optional
+        searchString을 찾기 시작할 위치. 기본값 0.
+
+        반환값
+        문자열을 찾아내면 true. 실패하면 false.
+
+        </pre>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        'use strict'
+
+    </script>
+</head>
+<body>
+    <!-- h2.text -->
+    <h2 class="text">제목</h2>
+    <h2 class="text">제목</h2>
+    <h2 class="text">제목</h2>
+    <h2 class="text">제목</h2>
+    <script>
+        let dom= document.getElementsByClassName('text');
+        console.log(dom);
+
+        dom[0].style.backgroundColor='yellow';
+        dom[1].style.backgroundColor='hotpink';
+        dom[2].style.backgroundColor='lavender';
+        dom[3].style.backgroundColor='lavenderblush';
+
+        for(let i=0; i<dom.length; i++){
+            dom[i].innerHTML='.text 영역의 ['+i+']번째 배열형식';
+            dom[i].style.padding="100px";
+        }
+
+
+    </script>
+    
+</body>
+</html>

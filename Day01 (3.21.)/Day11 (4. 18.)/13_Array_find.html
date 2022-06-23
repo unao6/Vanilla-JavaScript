@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        const arr=[10,20,30,40,50];
+        const arr1=arr.filter(function(item){
+            return item>30;
+        })
+        console.log(arr1);
+
+        const arr2=arr.find(function(item){
+            return item>30;
+        })
+        console.log(arr2);
+
+        const arr3=arr.find(function(item){
+            return item==40;
+        })
+        console.log(arr3);
+
+        //arr3 화살표로 바꾸기
+        const arr4=arr.find(item=> item==40);
+        console.log(arr4);
+        
+        //findIndex 인덱스 번호를 찾아줌
+        const arr5= arr.findIndex(item=> item==30);
+        console.log(arr5);
+
+    </script>
+</head>
+<body>
+    <pre>
+        - Array.prototype.find()
+            find() 메서드는 주어진 판별 함수를 만족하는 첫 번째 요소의 값을 반환합니다. 그런 요소가 없다면 undefined를 반환합니다.
+
+        - 문법
+            객체.find(function(현재값){
+                return 조건
+            })
+
+            객체.find(현재값=>조건) //일급함수
+
+        - 반환 값
+            주어진 판별 함수를 만족하는 첫 번째 요소의 값. 그 외에는 undefined.
+
+    </pre>
+    
+</body>
+</html>

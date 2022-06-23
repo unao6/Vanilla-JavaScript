@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="box">??</div>
+    <button onclick="onColor('아이디 찾아서 값넣기')">스타일 넣기</button>
+    <script>
+        'use strict'
+        const onColor=(text)=>{
+            let dom = document.getElementById('box');
+            dom.style.color="blue";
+            dom.style.padding="20px 60px";
+            dom.style.border="2px solid #000";
+            dom.style.margin="10px";
+            dom.style.fontSize="20px";
+
+            dom.innerHTML=text;
+        }
+
+    </script>
+    
+</body>
+</html>

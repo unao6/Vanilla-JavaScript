@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        let str1 = '4';
+        let str2 = str1.padStart(5,0);
+        document.write(str2, '<br>');
+
+        let str3 = '1234';
+        let str4 = str3.padStart(10,0);
+        document.write(str4, '<br>');
+
+        let str5 = '1234';
+        let str6 = str5.padEnd(10,0);
+        document.write(str6, '<br>');
+
+    </script>
+</head>
+<body>
+    <pre>
+        String.prototype.padStart()
+        현재 문자열의 시작을 다른 문자열로 채워, 주어진 길이를 만족하는 새로운 문자열을 반환합니다. 
+        채워넣기는 대상 문자열의 시작(좌측)부터 적용됩니다.
+        //앞에서 제품코드 했던것을 쉽게 하는 방법
+
+        구문
+        str.padStart(targetLength [, padString])
+
+        매개변수
+        targetLength
+        목표 문자열 길이. 현재 문자열의 길이보다 작다면 채워넣지 않고 그대로 반환.
+        padString Optional
+        현재 문자열에 채워넣을 다른 문자열. 문자열이 너무 길어 목표 문자열 길이를 초과한다면 좌측 일부를 잘라서 넣음. 기본값은 " ". (U+0020)
+
+        반환값
+        시작점부터 주어진 문자열로 채워 목표 길이를 만족하는 String.
+
+        End도 있는데 잘 쓰지는 않음
+    </pre>
+    
+</body>
+</html>

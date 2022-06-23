@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+        
+        let str = '안녕하세요 홍길동 입니다. 오늘은 수요일 입니다.';
+
+        let a = str.indexOf('안');
+        let b = str.indexOf('하');
+        let c = str.indexOf('홍길동');
+        let d = str.indexOf('김태리');
+        let e = str.indexOf('홍', 4);
+
+        document.write(`${a} <br>`);
+        document.write(`${b} <br>`);
+        document.write(`${c} <br>`);
+        document.write(`${d} <br>`);
+        document.write(`${e} <br>`);
+
+        const msg = str.indexOf('홍길동');
+        if(msg>-1){
+            document.write('해당 단어를 검색합니다. <br>');
+        }else{
+            document.write('해당 단어를 검색 할 수 없음. <br>');
+        }
+
+        //많이 사용하는 방법
+        if(str.indexOf('홍') != -1){
+            document.write('검색 <br>');
+        }else{
+            document.write('검색 못함<br>');
+            document.write('검색 못함<br>');
+        }
+    </script>
+</head>
+<body>
+    <pre>
+        indexOf() 메서드는 호출한 String 객체에서 주어진 값과 일치하는 첫번째 인덱스를 반환합니다
+        일치하는 값이 없으면 -1을 반환 (존재하지 않을때)
+
+        str.indexOf(searchValue[, fromIndex])
+    </pre>
+    
+</body>
+</html>

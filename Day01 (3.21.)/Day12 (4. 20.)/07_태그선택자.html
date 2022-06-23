@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <!-- p{태그선택자}+ul>li{list}*5^div>p{나도태그}^p{나는문단} -->
+    <p>태그선택자</p>
+    <ul>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+    </ul>
+    <div>
+        <p>나도태그</p>
+    </div>
+    <p>나는문단</p>
+
+    <script>
+        'use strict'
+        let arr=['사과', '오렌지', '수박', '사탕', '과자'];
+        let li= document.getElementsByTagName('li');
+        console.log(li);
+
+        li[0].style.color="red";
+        li[1].style.color="tomato";
+        li[2].style.color="skyblue";
+        li[3].style.color="cornflowerblue";
+        li[4].style.color="darkgreen";
+
+        //for~in
+        for(let idx in arr){
+            li[idx].innerHTML = arr[idx];
+        }
+
+        //기본 for문 이용 border, margin, 너비, 높이, 행간, 가운데정렬
+        for(let i=0; i<li.length; i++){
+            li[i].style.border="1px solid #000";
+            li[i].style.margin="5px";
+            li[i].style.width="250px";
+            li[i].style.lineHeight="2.5";
+            li[i].style.textAlign="center";
+            li[i].style.backgroundColor="azure";
+        }
+
+
+        let p= document.getElementsByTagName('p'); //몇번째 p인지 찾아갑니다~~
+        p[0].innerHTML='첫번째 문단';
+        p[1].innerHTML='두번째 문단';
+        p[2].innerHTML='세번째 문단'; 
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 300px; height: 100px; border: 1px solid #000; cursor: pointer;
+        }
+        .box{
+            background: hotpink;
+        }
+        a { font-size: 20px; }
+
+    </style>
+</head>
+<body>
+
+    <div id="box" onclick="onBox()"></div>
+    <a href="#">xxx</a>
+
+    <script>
+        
+        const a= document.querySelector('a');
+        a.innerText= '네이버'
+        a.setAttribute('href', 'http://www.naver.com');
+        a.setAttribute('target', '_blank');
+        a.setAttribute('title', '네이버로 이동합니다');
+
+        const onBox= () =>{
+            let dom= document.querySelector('#box');
+            dom.setAttribute('class', 'box');
+        }
+
+    </script>
+
+    <pre>
+        <태그 속성="값" 속성="값">
+        setAttribute('속성', '값')   // 이렇게 쓰는게 돔방식
+        getAttribute('속성')
+    </pre>
+    
+</body>
+</html>

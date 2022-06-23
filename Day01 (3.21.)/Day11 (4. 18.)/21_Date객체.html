@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+        //날짜 객체 선언
+        const now = new Date();
+        document.write(`오늘은 ${now} <br>`);
+        document.write(`오늘은 ${now.toLocaleDateString()} <br>`);
+        document.write(`오늘은 ${now.toLocaleTimeString()} <br>`);
+
+        //특정 날짜 지정
+        const newDate= new Date(2022, 11, 25);
+        document.write(`오늘은 ${newDate} <br>`);
+
+       
+    </script>
+</head>
+<body>
+    <pre>
+        날짜,시간에 해당하는 객체
+        연 월 일 시 분 초
+        new Date()
+    </pre>
+    
+</body>
+</html>

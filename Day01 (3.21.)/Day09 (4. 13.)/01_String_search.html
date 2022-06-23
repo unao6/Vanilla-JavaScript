@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+        
+        let str = '안녕하세요 홍길동 입니다. 오늘은 수요일 입니다.';
+
+        let a = str.search('안');
+        let b = str.search('세');
+        let c = str.search('홍길동');
+        let d = str.search('송혜교');
+
+
+        document.write(`${a} <br>`);
+        document.write(`${b} <br>`);
+        document.write(`${c} <br>`);
+        document.write(`${d} <br>`);
+
+        if(str.search('홍')>-1){
+            document.write('해당 단어를 검색합니다.<br>');
+        }else{
+            document.write('해당 단어를 검색 할 수 없음.<br>');
+        }
+
+        if(str.search('혜교')!= -1){
+            document.write('해당 단어를 검색합니다.<br>');
+        }else{
+            document.write('해당 단어를 검색 할 수 없음.<br>');
+        }
+
+    </script>
+</head>
+<body>
+    <pre>
+        구문
+        str.search(regexp)
+
+        매개변수
+        regexp
+
+        정규 표현식 객체.  non-RegExp 객체 obj 가 전달되면,  그것은  new RegExp(obj) 을 이용하여 RegExp 으로 암묵적으로 변환된다.
+        
+        반환 값
+        정규표현식과 주어진 스트링간에 첫번째로 매치되는 것의 인덱스를 반환한다.
+        찾지 못하면 -1 를 반환한다.
+
+        // 이게 인덱스보다 좋은점이 분명히 있지만 지금은 알 수 없고 뒤에서 설명하시겠다고 함
+        // 지금까지는 인덱스와 똑가틈. 몇번째 그건 안됨.
+        // 서치는 정규표현식에 강하다
+        // 인덱스나 서치나 기능은 똑같이 할수 있다~
+
+        </pre>
+    
+</body>
+</html>

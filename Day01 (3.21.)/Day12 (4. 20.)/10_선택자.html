@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        'use strict'
+
+    </script>
+</head>
+<body>
+    <!-- h1#text{제목1} -->
+    <h1 id="text">제목1</h1>
+
+    <!-- h2.title{제목}*3 -->
+    <h2 class="title">제목2</h2>
+    <h2 class="title">제목2</h2>
+    <h2 class="title">제목2</h2>
+
+    <h3>제목3</h3>
+    <hr>
+
+    <!-- div.box>h2{제목2}+ul>li{list$}*5 -->
+    <div class="box">
+        <h2>제목2</h2>
+        <ul>
+            <li>list1</li>
+            <li>list2</li>
+            <li>list3</li>
+            <li>list4</li>
+            <li>list5</li>
+        </ul>
+    </div>
+
+    <script>
+        //한개만 가져오기
+        let h1= document.querySelector('#text');
+        let h2= document.querySelector('.title');
+        let h3= document.querySelector('h3');
+
+        h1.style.color="navy";
+        h2.style.color="green";
+        h3.style.color="pink";
+
+        let box= document.querySelector('.box');
+        let ul= document.querySelector('.box ul');
+        let li= document.querySelectorAll('.box ul li');
+        console.log(li);  // NodeList라고 나옴 (유사배열- 배열처럼 쓸 수는 있으나 배열이 가지고있는 모든 메서드를 쓸수는 없음)
+
+        box.style.margin="20px";
+        box.style.border="2px solid #000";
+        box.style.padding="15px";
+        
+        ul.style.padding="20px"
+
+        //for~in
+        for(let idx in li){
+            li[idx].style.color="pink";
+            li[idx].style.border="1px solid #333";
+            li[idx].style.marginBottom="5px";
+            li[idx].style.textIndent="10px";
+            li[idx].style.lineHeight="2";
+        }
+
+    </script>
+
+    <pre>
+        querySelector('선택자'): 하나의 대상만 찾아감!
+        querySelector('#아이디')
+        querySelector('#아이디 > 자식요소')
+        querySelector('#아이디 자식요소')
+        querySelector('.클래스')
+
+        querySelectorAll('선택자'): 여러개의 대상을 찾아감!
+        querySelectorAll('ul li')
+        querySelectorAll('li')
+        querySelectorAll('.class')
+        querySelectorAll('.box li')
+        querySelectorAll('#box li')
+
+    </pre>
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+
+        const obj = [
+            {name: '김00', age:20},
+            {name: '이00', age:23},
+            {name: '박00', age:30},
+            {name: '최00', age:29},
+            {name: '정00', age:51},
+            {name: '문00', age:45}
+        ]
+
+        //나이순 정렬
+        obj.sort( (a,b)=>{
+            if(a.age > b.age){
+                return 1;
+            }else if(a.age< b.age){
+                return -1;
+            }else{
+                return 0;
+            }
+
+
+        })
+        //화면에 출력 for문
+        for(let i=0; i<obj.length; i++){
+            document.write(`${obj[i].name} / ${obj[i].age} <br>`);
+        }
+
+        
+
+
+        //sort -> if대신 삼항연산자로 변경
+        const obj1 = [
+            {name: '김00', age:20},
+            {name: '이00', age:23},
+            {name: '박00', age:30},
+            {name: '최00', age:29},
+            {name: '정00', age:51},
+            {name: '문00', age:45}
+        ]
+        
+        obj1.sort( (a,b) => {
+            return a.age>b.age ? 1: a.age<b.age ? -1 : 0
+        })
+        for(let item of obj1){
+            document.write(`${item.name} / ${item.age} <br>`);
+        }
+        
+        
+
+    </script>
+</head>
+<body>
+    <pre>
+        
+    </pre>
+    
+</body>
+</html>

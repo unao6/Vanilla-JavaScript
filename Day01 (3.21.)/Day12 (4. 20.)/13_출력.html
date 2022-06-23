@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <title>Document</title>
+    <style>
+        h1, h2 { font-size: 30;}
+        .name {display:none;}
+    </style>
+    <script>
+        'use strict'
+
+    </script>
+</head>
+<body>
+
+    <h1 id="text01"></h1>
+    <h1 id="text02"></h1>
+    <h1 id="text03"></h1>
+    <hr>
+
+    <h2 id="text">안녕하세요 <span class="name">김태리</span>님</h2>
+
+    <script>
+        let text01= document.querySelector('#text01');
+        let text02= document.querySelector('#text02');
+        let text03= document.querySelector('#text03');
+        let text= document.querySelector('#text');
+
+        text01.innerHTML= '<a href="#">링크태그</a>'
+        text02.innerText= '<a href="#">링크태그</a>'
+        text03.textContent= '<a href="#">링크태그</a>'
+
+        console.log(text.innerHTML); //안녕하세요 <span class="name">김태리</span>님
+        console.log(text.innerText); //안녕하세요 님
+        console.log(text.textContent); //안녕하세요 김태리님 (dp:none까지 다 보임)
+        // 이런 성격적인 다른점 외에는 다른것은 똑같음
+
+
+    </script>
+    
+</body>
+</html>

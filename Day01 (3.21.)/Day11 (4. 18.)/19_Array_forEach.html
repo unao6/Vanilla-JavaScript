@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+        const arr=[0,1,2,3,4,5,6,7,8,9,10];
+        arr.forEach(function(c, i, a){
+            document.write(`${a}의 ${i} 번째의 요소 ${c}<br>`);
+        })
+        document.write(`<br>------------------------<br>`);
+
+        arr.forEach(function(item){
+            document.write(`${item},`);
+        })
+
+        // arr.forEach(item=>document.write(`${item},`))
+        document.write(`<br>------------------------<br>`);
+
+        const arr1=arr.forEach(function(item){
+            return item%2==0;
+        })
+        document.write(arr1);
+        document.write(`<br>------------------------<br>`);
+
+        const arr2=[];
+        arr.forEach(function(item){
+            if(item%2==0){
+                arr2.push(item)
+            }
+        })
+        document.write(arr2);
+        document.write(`<br>------------------------<br>`);
+
+   
+        const arr3=['red', 'green', 'blue', 'pink'];
+        const arrTest=[];
+
+        arr3.forEach((item,idx)=>{
+            // arrTest[idx] = arr3[idx]+'color'; //노가다
+            // arrTest[idx]=item+'color';
+            arrTest.push(item+'color');
+
+        })
+        document.write(arrTest);
+        document.write(`<br>------------------------<br>`);
+
+        for(let i = 0; i<arr3.length; i++){
+            if(i==2){
+            document.write(' 반복문 중단<br>');
+            break;
+            }
+        document.write(`${i}번째 요소 => ${arr3[i]}<br>`);
+        }
+
+        document.write(`<br>------------------------<br>`);
+        //for 문은 break문을 쓸 수 있지만 forEach문은 break사용 불가능. continue도 사용할 수 없음
+        /*
+        arr.forEach((item, idx)=>{ 
+            if(idx==2){
+                document.write(' 반복문 중단<br>');
+                break;
+            }
+            document.write(`${idx}번째 요소 => ${arr3[idx]}<br>`);
+        })
+        */
+
+
+
+    </script>
+</head>
+<body>
+    <pre>
+        - Array.prototype.forEach()
+            forEach() 메서드는 주어진 함수를 배열 요소 각각에 대해 실행합니다.
+
+        - 구문
+            arr.forEach(callback(currentvalue[, index[, array]])[, thisArg])
+        - 매개변수
+            callback
+            각 요소에 대해 실행할 함수. 다음 세 가지 매개변수를 받습니다.
+            currentValue
+            처리할 현재 요소.
+            index Optional
+            처리할 현재 요소의 인덱스.
+            array Optional
+            forEach()를 호출한 배열.
+            thisArg Optional
+            callback을 실행할 때 this로 사용할 값.
+        - 반환 값
+            undefined.
+    </pre>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+        const data=[
+            {text:'naver'},
+            {text:'NAVER'},
+            {text:'nate'},
+            {text:'NATE'},
+            {text:'GOOGLE'},
+            {text:'google'},
+            {text:'yahoo'},
+            {text:'YaHoo'},
+            {text:'daum'},
+            {text:'Daum'},
+        ]
+
+        const txt='a'; //indexOf, includes
+        //const data1= data.filter(item=> item.text.indexOf(txt)!= -1)
+        //const data1= data.filter(item=> item.text.toLowerCase().indexOf(txt.toLowerCase())!= -1)
+        const data1= data.filter(item=> item.text.toLowerCase().indexOf(txt.toLowerCase()))
+        for(let key of data1){            
+            document.write(`검색a: ${key.text} <br>`);
+        }
+
+    </script>
+</head>
+<body>
+    <pre>
+        일급함수
+        함수를 값으로 다룰 수 있다
+        const add=a=>a+100
+
+        아래꺼까지하니까 안됨 ㅡㅡ 또 확인 안해줌 . 위에두개느 ㄴ됐음 근데 그전에는 for안에 있었던것도?
+    </pre>
+    
+</body>
+</html>

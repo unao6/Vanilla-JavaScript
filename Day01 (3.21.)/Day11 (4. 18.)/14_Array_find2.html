@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+        const data = [
+            {id:1, name:'김00', age:20, city:'제주'},
+            {id:2, name:'이00', age:19, city:'경기'},
+            {id:3, name:'박00', age:14, city:'제주'},
+            {id:4, name:'최00', age:28, city:'울산'},
+            {id:5, name:'정00', age:30, city:'서울'},
+            {id:6, name:'문00', age:29, city:'경기'},
+        ]
+
+        //문제)id가 4번인 데이터를 삭제하기, filter
+        const data1=data.filter(item=> item.id!=4);
+        console.log(data1);
+
+        //문제) city가 제주인사람 찾기
+        const data2=data.filter(item=> item.city=='제주');
+        console.log(data2);
+
+        //똑같이 제주인데,, find는 첫번째 하나만 반환
+        const data3=data.find(item=> item.city=='제주');
+        console.log(data3);
+
+        const data4= data.find(item=> item.age>=20);
+        console.log(data4);
+        //그래서 find는 어떤 값에 해당하는거 하나 찾을때 주로 씀.
+
+        const data5= data.findIndex(item=> item.age==19);
+        console.log(data5);
+
+    </script>
+</head>
+<body>
+    <pre>
+        
+    </pre>
+    
+</body>
+</html>

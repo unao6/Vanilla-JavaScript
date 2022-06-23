@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+        let users=['user1', 'user2', 'user3', 'user4']
+        //            0        1        2        3
+
+        let arr=[];
+        arr[0]='홍길동';
+        arr[1]=20;
+        arr[2]='서울시 서초구';
+        arr[3]='010-0000-1111';
+
+        document.write(`이름: ${arr[0]} <br>`);
+        document.write(`나이: ${arr[1]} <br>`);
+        document.write(`주소: ${arr[2]} <br>`);
+        document.write(`번호: ${arr[3]} <br>`);
+        document.write(`배열갯수: ${arr.length}개 <br>`);
+        document.write(`========================<br>`);
+
+        const menuList=['MainMenu0', 'MainMenu1', 'MainMenu2', 'MainMenu3']
+        //for문 0번째방 = MainMenu0
+        for(let i=0; i<menuList.length; i++){
+            document.write(`menuList${i} <br>`);
+        }
+
+        for(let i=0; i<menuList.length; i++){
+            let menuItem=menuList[i];
+            document.write(`${i}번째방: ${menuItem} <br>`);
+        }
+        
+        document.write(`========================<br>`);
+
+    
+        //for ~ of : 값
+        let cnt = 0;
+        for(let item of menuList){
+            let menuItem=item;
+            document.write(`${cnt}번째방: ${menuItem} <br>`);
+            cnt++;
+        }
+
+        document.write(`========================<br>`);
+
+        //for ~ in : index
+        for(let idx in menuList){
+            let menuItem=menuList[idx];
+            document.write(`${idx}번째방: ${menuItem} <br>`);
+        }
+
+    </script>
+</head>
+<body>
+    <pre>
+        
+    </pre>
+    
+</body>
+</html>

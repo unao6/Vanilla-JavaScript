@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        'use strict'
+        const now = new Date();
+        let h = now.getHours();
+        let m = now.getMinutes();
+        let s = now.getSeconds();
+
+        if(h>12){
+            h=h-12;
+            h='PM'+h;
+        }else{
+            h='AM'+h;
+        }
+
+
+        document.write(h, '시', m, '분', s, '초');
+        //사실 전세계시간 받아오는거 생각하면 생각할게 더 많긴 함.
+
+    </script>
+</head>
+<body>
+    <script>
+        'use strict'
+
+    </script>
+    
+</body>
+</html>

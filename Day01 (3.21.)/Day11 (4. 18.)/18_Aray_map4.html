@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{ margin: 0px; padding: 0px;}
+        table{margin: 20px auto; border-collapse: collapse;}
+        th, td{
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+            width: 150px;
+            ;
+        }
+    </style>
+    
+</head>
+<body>
+    //보여주려고 맛배기로 한 것 
+
+    <table>
+        <thead>
+            <tr>
+                <td>번호</td>
+                <td>이름</td>
+                <td>나이</td>
+                <td>주소</td>
+            </tr>
+        </thead>
+
+        <tbody class="box">
+
+        </tbody>
+    </table>
+    <script>
+        'use strict'
+        const data = [
+            {id:1, name:'김00', age:20, city:'제주'},
+            {id:2, name:'이00', age:19, city:'경기'},
+            {id:3, name:'박00', age:14, city:'제주'},
+            {id:4, name:'최00', age:28, city:'울산'},
+            {id:5, name:'정00', age:30, city:'서울'},
+            {id:6, name:'문00', age:29, city:'경기'},
+        ]
+        const dom= document.querySelector('.box');
+        const data2= data.map(item=>  //화살표함수로
+            `<tr>
+                <td>${item.id}</td>
+                <td>${item.name}</td>
+                <td>${item.age}</td>
+                <td>${item.city}</td>
+            </tr>`)
+        
+
+        const data1= data.map(function(item){  //item은 위의 데이터 한줄 전체를 받음
+            return(`<tr>
+                <td>${item.id}</td>
+                <td>${item.name}</td>
+                <td>${item.age}</td>
+                <td>${item.city}</td>
+            </tr>`)
+        })
+
+        dom.innerHTML=data1.join('');
+
+    </script>
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+        let now = '2022-04-13';
+        //년도 subString 이용 / 몇번째? ,
+        //indexOf 년, 월 출력
+
+        //2022년 04월
+
+        const y = now.substring(0, now.indexOf('-'));
+        const m = now.substring(5, now.indexOf('-',6));
+
+
+        document.write(`${y}년 ${m}월 `);
+
+
+
+    </script>
+</head>
+<body>
+    <pre>
+        
+    </pre>
+    
+</body>
+</html>

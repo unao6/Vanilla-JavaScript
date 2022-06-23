@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        'use strict'
+        let product = {
+            '제품명': '아메리카노',
+            '유형': '커피',
+            '성분': '원두',
+            '원산지': '한국'
+        }
+
+        document.write(product, '<br>');
+
+        document.write('제품명: ', product.제품명, '<br>');
+        document.write('유형: ', product.유형, '<br>');
+        document.write('성분: ', product.성분, '<br>');
+        document.write('원산지: ', product.원산지, '<br>');
+        document.write('=====================<br>');
+
+        document.write('제품명: ', product['제품명'], '<br>');
+        document.write('유형: ', product['유형'], '<br>');
+        document.write('성분: ', product['성분'], '<br>');
+        document.write('원산지: ', product['원산지'], '<br>');
+        document.write('=====================<br>');
+
+        //for~in 배열: 인덱스, 객체 : 키
+        for(let key in product) {
+            document.write(key, '<br>');
+
+        }
+
+        for(let key in product){
+            document.write(key,' : ',product[Key], '<br>');
+        }
+
+    </script>
+</head>
+<body>
+    <pre>
+        
+    </pre>
+    
+</body>
+</html>
